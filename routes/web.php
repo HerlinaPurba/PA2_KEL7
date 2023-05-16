@@ -139,6 +139,22 @@ Route::group(['middleware' => ['auth']], function(){
         Route::get('aturanumum', function () {
             return view('user.aturanumum');
         });
+        Route::get('aturanputri', function () {
+            return view('user.aturanputri');
+        });
+        Route::get('aturanaskembar', function () {
+            return view('user.aturanaskembar');
+        });
+        Route::get('aturanasantiokhia', function () {
+            return view('user.aturanasantiokhia');
+        });
+        Route::get('aturanasrus1', function () {
+            return view('user.aturanasrus1');
+        });
+        Route::get('aturanasmandiri', function () {
+            return view('user.aturanasmandiri');
+        });
+
         Route::get('halamanasrama', function () {
             return view('user.halamanasrama');
         });

@@ -51,15 +51,14 @@
               <ul>
                 <li><a href="#about">Profil Keasramaan</a></li>
                 <li class="dropdown"><a href="#services"><span>Rules of Dormitory</span> <i class="bi bi-chevron-down"></i></a>
-                  {{-- <ul>
-                    <li><a href="#rusun1">Rusunawa 1</a></li>
-                    <li><a href="#rusun1">Rusunawa 2 dan 3</a></li>
-                    <li><a href="#rusun1">Rusunawa 4</a></li>
-                    <li><a href="#pniel">Pniel</a></li>
-                    <li><a href="#silo">Silo</a></li>
-                    <li><a href="#kapernaum">Kapernaum</a></li>
-                    <li><a href="#dantob">Danau Toba</a></li>
-                  </ul> --}}
+                  <ul>
+                    <li><a href="aturanumum">Aturan Umum</a></li>
+                    <li><a href="aturanputri">Aturan Asrama Putri</a></li>
+                    <li><a href="aturanaskembar">Aturan Asrama Kembar</a></li>
+                    <li><a href="aturanasantiokhia">Aturan Asrama Antiokhia</a></li>
+                    <li><a href="aturanasrus1">Aturan Asrama Rusunawa 1</a></li>
+                    <li><a href="aturanasmandiri">Aturan Asrama Luar Kampus (Asrama Mandiri)</a></li>
+                  </ul>
                 </li>
                 <li><a href="#portofolio">TuPokSiMi</a></li>
               </ul>
@@ -543,8 +542,15 @@
                     </svg>
                     <i class="bi bi-person-fill"></i>
                   </div>
-              <h4><a href="">Aturan Asrama Putri</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <h4><a href="aturanputri">Aturan Asrama Putri</a></h4>
+              <p>Aturan yang berlaku pada setiap asrama yang dihuni oleh mahasiswi (Perempuan)</p><br>
+              <p>
+                @if (file_exists(public_path('asset/aturan-putri.pdf')))
+                <a href="{{ asset('asset/aturan-putri.pdf') }}" download>Unduh</a>
+            @else
+                File not found
+            @endif
+              </p>
             </div>
           </div>
 
@@ -556,8 +562,15 @@
               </svg>
               <i class="bi bi-people-fill"></i>
             </div>
-            <h4><a href="">Aturan Asrama Kembar</a></h4>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            <h4><a href="aturanaskembar">Aturan Asrama Kembar</a></h4>
+            <p>Aturan yang berlaku pada asrama dalam yang memiliki nama Silo dan Kapernaum</p><br>
+              <p>
+                @if (file_exists(public_path('asset/aturan-asrama-kembar.pdf')))
+                <a href="{{ asset('asset/aturan-asrama-kembar.pdf') }}" download>Unduh</a>
+            @else
+                File not found
+            @endif
+              </p>
           </div>
         </div>
       </div>
@@ -571,8 +584,15 @@
                     </svg>
                     <i class="bi bi-house-gear-fill"></i>
                   </div>
-              <h4><a href="">Aturan Asrama Antiokhia (Danau Toba)</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <h4><a href="aturanasantiokhia">Aturan Asrama Antiokhia (Danau Toba)</a></h4>
+              <p>Aturan yang berlaku pada asrama dalam yang berlokasi disamping pemandangan Danau Toba</p><br>
+              <p>
+                @if (file_exists(public_path('asset/aturan-asrama-dantob.pdf')))
+                <a href="{{ asset('asset/aturan-asrama-dantob.pdf') }}" download>Unduh</a>
+            @else
+                File not found
+            @endif
+              </p>
             </div>
           </div>
 
@@ -584,8 +604,15 @@
                     </svg>
                     <i class="bi bi-house-gear-fill"></i>
                   </div>
-              <h4><a href="">Aturan Asrama Luar Kampus (Rusunawa 1)</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <h4><a href="aturanasrus1">Aturan Asrama Luar Kampus (Rusunawa 1)</a></h4>
+              <p>Aturan yang berlaku pada asrama luar kampus yang bernama Rusunawa 1</p><br>
+              <p>
+                @if (file_exists(public_path('asset/aturan-asrama-rusun1.pdf')))
+                <a href="{{ asset('asset/aturan-asrama-rusun1.pdf') }}" download>Unduh</a>
+            @else
+                File not found
+            @endif
+              </p>
             </div>
           </div>
 
@@ -597,8 +624,15 @@
                     </svg>
                     <i class="bi bi-house-gear-fill"></i>
                   </div>
-              <h4><a href="">Aturan Asrama Luar Kampus (Asrama Mandiri)</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <h4><a href="aturanasmandiri">Aturan Asrama Luar Kampus (Asrama Mandiri)</a></h4>
+              <p>Aturan yang berlaku pada asrama luar kampus</p><br>
+              <p>
+                @if (file_exists(public_path('asset/aturan-asrama-mandiri.pdf')))
+                <a href="{{ asset('asset/aturan-asrama-mandiri.pdf') }}" download>Unduh</a>
+            @else
+                File not found
+            @endif
+              </p>
             </div>
           </div>
       </div>
