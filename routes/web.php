@@ -131,6 +131,10 @@ Route::group(['middleware' => ['auth']], function(){
             return view('user.evaluation');
         });
 
+        // sakit
+        Route::get('sakit', function () {
+            return view('user.sakit');
+        });
         // //download pdf
         // Route::get('/download-pdf', 'PDFControllerUser@downloadPDF')->name('Tabel Pembagian Waktu.pdf');
 

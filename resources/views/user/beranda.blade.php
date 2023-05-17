@@ -822,11 +822,8 @@
           <div class="box">
             <h3>Data Mahasiswa Alergi</h3>
             <ul>
-              <li>Aida dere</li>
-              <li>Nec feugiat nisl</li>
-              <li>Nulla at volutpat dola</li>
-              <li class="na">Pharetra massa</li>
-              <li class="na">Massa ultricies mi</li>
+              <li>Mahasiswa diizinkan untuk menukar lauk jika dan hanya jika ada pantangan atau alergi terhadap jenis lauk tertentu yang disajikan saat itu. Penukaran dilakukan kepada pihak kantin di tempat yang ditentukan. Daftar mahasiswa yang memiliki pantangan sudah dimiliki oleh pihak kantin melalui Pembina Asrama.</li>
+
             </ul>
             <div class="btn-wrap">
               <a href="{{route('alergic.index')}}" class="btn-buy">Lihat</a>
@@ -839,11 +836,7 @@
             <h3>Data Mahasiswa Sakit</h3>
 
             <ul>
-              <li>Aida dere</li>
-              <li>Nec feugiat nisl</li>
-              <li>Nulla at volutpat dola</li>
-              <li>Pharetra massa</li>
-              <li class="na">Massa ultricies mi</li>
+              <li>Mahasiswa yang mengalami sakit wajib melapor kepada Pembina Asrama, baik secara langsung maupun melalui teman mahasiswa. Pembina Asrama akan memberikan penanganan awal sesuai dengan petunjuk dokter kampus, misalnya: dengan istirahat, pemberian obat tertentu, dibawa ke klinik Del atau ke Rumah Sakit.</li>
             </ul>
             <div class="btn-wrap">
               <a href="sakit" class="btn-buy">Lihat</a>
@@ -854,13 +847,10 @@
         <div class="col-lg-4 col-md-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="100">
           <div class="box">
             <h3>Dokumen</h3>
-
+            <br><br>
             <ul>
-              <li>Aida dere</li>
-              <li>Nec feugiat nisl</li>
-              <li>Nulla at volutpat dola</li>
-              <li>Pharetra massa</li>
-              <li>Massa ultricies mi</li>
+              <li>File - file mengenai asrama dan keasramaan dapat di unduh langsung pada halaman ini.</li>
+              <br>
             </ul>
             <div class="btn-wrap">
               <a href="{{route('document.index')}}" class="btn-buy">Lihat</a>
