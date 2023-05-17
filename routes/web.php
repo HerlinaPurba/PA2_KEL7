@@ -135,6 +135,7 @@ Route::group(['middleware' => ['auth']], function(){
         Route::get('sakit', function () {
             return view('user.sakit');
         });
+
         // //download pdf
         // Route::get('/download-pdf', 'PDFControllerUser@downloadPDF')->name('Tabel Pembagian Waktu.pdf');
 
@@ -159,6 +160,10 @@ Route::group(['middleware' => ['auth']], function(){
             return view('user.aturanasmandiri');
         });
 
+        // ketentuan umum
+        Route::get('ketentuan-umum', function () {
+            return view('user.ketentuan-umum');
+        });
         Route::get('halamanasrama', function () {
             return view('user.halamanasrama');
         });

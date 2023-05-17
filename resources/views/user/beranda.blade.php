@@ -25,10 +25,6 @@
   <link rel="stylesheet" href="assets/vendor/remixicon/remixicon.css" >
   <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" >
  <!-- Bootstrap Links-->
- {{-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script> --}}
-
   <!-- Template Main CSS File -->
   <link rel="stylesheet" href="assets/css/style.css" >
 
@@ -41,15 +37,13 @@
       <div class="container d-flex align-items-center justify-content-between">
 
         <h1 class="logo"><a href="{{url('/index')}}">Dormitory ITD</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
         <nav id="navbar" class="navbar">
           <ul>
             <li><a class="nav-link scrollto" href="#">Home</a></li>
             <li class="dropdown"><a href="#"><span>About Dormitory</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
-                <li><a href="#about">Profil Keasramaan</a></li>
+                <li><a href="#team">Profil Keasramaan</a></li>
                 <li class="dropdown"><a href="#services"><span>Rules of Dormitory</span> <i class="bi bi-chevron-down"></i></a>
                   <ul>
                     <li><a href="aturanumum">Aturan Umum</a></li>
@@ -60,7 +54,7 @@
                     <li><a href="aturanasmandiri">Aturan Asrama Luar Kampus (Asrama Mandiri)</a></li>
                   </ul>
                 </li>
-                <li><a href="#portofolio">TuPokSiMi</a></li>
+                <li><a href="#tupoksimi">TuPokSiMi</a></li>
               </ul>
             </li>
 
@@ -112,7 +106,7 @@
           <div class="icon-box">
             <div class="icon"><i class="ri-stack-line"></i></div>
             <h4 class="title"><a href="kurveyharian">Jadwal Kurve</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            <p class="description">Kegiatan kurve (bersih-bersih) merupakan kegiatan rutinitas Civitas Institut Teknologi Del</p>
           </div>
         </div>
 
@@ -120,15 +114,15 @@
           <div class="icon-box">
             <div class="icon"><i class="ri-book-open-line"></i></div>
             <h4 class="title"><a href="renungan">Renungan Harian</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            <p class="description">Pelaksanaan Ibadah di Asrama IT Del terdiri dari dua sesi yaitu, Sesi Saat Teduh dan Sesi Ibadah Malam.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
           <div class="icon-box">
             <div class="icon"><i class="ri-file-copy-2-line"></i></div>
-            <h4 class="title"><a href="">Evaluasi</a></h4>
-            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            <h4 class="title"><a href="datadorm">Evaluasi</a></h4>
+            <p class="description">Evaluasi mahasiswa merupakan kegiatan rutin asrama yang dilakukan guna mengevaluasi program/rutinitas mahasiswa di asrama.</p>
           </div>
         </div>
 
@@ -136,7 +130,7 @@
           <div class="icon-box">
             <div class="icon"><i class="ri-home-gear-line"></i></div>
             <h4 class="title"><a href="aturanumum">Aturan Asrama</a></h4>
-            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+            <p class="description">Mahasiswa yang telah menjadi bagian Institut Teknologi Del wajib untuk mengikuti tata tertib maupun aturan Asrama.</p>
           </div>
         </div>
 
@@ -163,19 +157,19 @@
         <div class="row content">
           <div class="col-lg-6">
             <p>
-              Setiap Asrama Institut Teknologi Del memiliki fasilitas dan diawasi oleh Bapak/Ibu Asrama yang merupakan orang tua di asrama tersebutl.
+              Setiap Asrama Institut Teknologi Del memiliki fasilitas dan diawasi oleh Bapak/Ibu Asrama yang merupakan orang tua di asrama tersebut. Mahasiswa juga diharapkan untuk :
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+              <li><i class="ri-check-double-line"></i> Mengikuti Ibadah mahasiswa sesuai dengan kepercayaan masing-masing.</li>
+              <li><i class="ri-check-double-line"></i> Mengikuti Evaluasi mahasiswa sesuai dengan jadwal yang telah ditentukan.</li>
+              <li><i class="ri-check-double-line"></i> Mahasiswa wajib mengikuti acara senam pagi yang diselenggarakan pada hari Selasa dan Jumat</li>
             </ul>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-                Untuk mendukung kualitas hidup berasrama, mahasiswa akan diawasi oleh Bapak/Ibu asrama dibantu oleh Kakak/Abang asrama. Dengan peraturan asrama yang diberlakukan, mahasiswa akan hidup lebih disiplin dan berbudaya.
+            <p align="justify">
+                Untuk mendukung kualitas hidup berasrama, mahasiswa akan diawasi oleh Bapak/Ibu asrama dibantu oleh Kakak/Abang asrama. Dengan peraturan asrama yang diberlakukan, mahasiswa akan hidup lebih disiplin dan berbudaya. Mahasiswa juga memiliki hak dan kewajiban sebagai asrama, menggunakan fasilitas asrama, dan lainnya yang akan dilampirkan pada halaman link dibawah ini.
             </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
+            <a href="ketentuan-umum" class="btn-learn-more">Ketentuan Umum</a>
           </div>
         </div>
 
@@ -221,32 +215,27 @@
   </section><!-- End Counts Section -->
 
   <!-- ======= About Video Section ======= -->
-  <section id="about-video" class="about-video">
+  <section id="" class="about-video">
     <div class="container" data-aos="fade-up">
 
       <div class="row">
 
         <div class="col-lg-6 video-box align-self-baseline" data-aos="fade-right" data-aos-delay="100">
+            <br><br>
           <img src="assets/img/about-video.jpg" class="img-fluid" alt="">
-          <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+          <a href="https://youtu.be/eQNuaqx1xQI" class="glightbox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
         </div>
 
         <div class="col-lg-6 pt-3 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
           <h3>Bapak/Ibu asrama memiliki latar belakang yang menempuh pendidikan menjadi Pendeta</h3>
-          <p class="fst-italic">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
-          </p>
-          <ul>
+          <br><br>
+
+          <ul align="justify">
             <li><i class="bx bx-check-double"></i> Satu orang Bapak dan atau Ibu Pendeta yang ditugasi di kampus IT Del sebagai Pembina Asrama, sesuai yang ditunjuk oleh Wakil Rektor Bidang Akademik dan Kemahasiswaan sebagai “Koordinator Pembina Asrama”</li>
             <li><i class="bx bx-check-double"></i> Selanjutnya. Bapak dan Ibu Pendeta yang ditugasi sebagai Pembina Asrama, secara langsung dinamai Bapak/Ibu Asrama.</li>
             <li><i class="bx bx-check-double"></i> Bapak dan Ibu Pendeta atau yang ditunjuk bertugas sebagai Pembina Asrama di IT Del, namun situasi di asrama terdapat Pembina asrama senior masa kerja masih disetarakan dengan masa penyesuaian disebut sebagai “Pendamping Pembian Asrama. Waktu pelaksanaan atau penugasan sebagai Pendamping Pembina asrama, disesuaikan kebutuhan, ketentuan penilaian atau rekomendasi pimpinan (Direktur Pendidikan, Wakil Rektor dan Rektor).</li>
           </ul>
-          <p>
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum
-          </p>
+
         </div>
 
       </div>
@@ -255,12 +244,12 @@
   </section><!-- End About Video Section -->
 
   <!-- ======= About Section ======= -->
-  <section id="about" class="about">
+  <section id="tupoksimi" class="about">
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
         <h2>Tugas Pokok, Visi dan Misi</h2>
-        <p>Tugas Koordinator Pembina Asrama, Tugas Bapak/Ibu Pembina Asrama dan Tugas Pendamping Bapak/Ibu Asrama.</p>
+        <p >Tugas Koordinator Pembina Asrama, Tugas Bapak/Ibu Pembina Asrama dan Tugas Pendamping Bapak/Ibu Asrama.</p>
       </div>
 
       <div class="row content">
@@ -270,7 +259,7 @@
             Tugas Koordinator Pembina Asrama
            </b>
           </p>
-          <ul>
+          <ul align="justify">
             <li><i class="ri-check-double-line"></i> Bertanggung jawab dalam menyusun rencana, memberikan arahan, mengatur dan mengkoordinasikan sistem pelayanan dan teknis pelaksanaan kegiatan asrama baik internal maupun eksternal, serta mengevaluasi keseluruhan rangkaian program di Asrama mahasiswa IT Del berdasarkan nilai-nilai Del MarTuhan-Marroha-Marbisuk;</li>
             <li><i class="ri-check-double-line"></i> Bertanggungjawab langsung kepada Direktur Pendidikan;</li>
             <li><i class="ri-check-double-line"></i> Membuat rencana program Asrama (kalender Kegiatan Keasramaan)  untuk jangka pendek, jangka menengah dan jangka panjang;</li>
@@ -284,8 +273,8 @@
           </ul>
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0">
-          <p>
-            Tugas Bapak/Ibu Pembina Asrama, Tata Tertib Asrama, Tanggung Jawab Pembina Asrama, Sistem Penilaian Perilaku dapat dilihat dan diunduh pada button link dibawah ini
+          <p align="justify">
+            Tugas Bapak/Ibu Pembina Asrama, Tata Tertib Asrama, Tanggung Jawab Pembina Asrama, Sistem Penilaian Perilaku dapat dilihat dan diunduh pada link dibawah ini
           </p>
           <a href="halamanasrama" class="btn-learn-more">Lihat</a>
         </div>
