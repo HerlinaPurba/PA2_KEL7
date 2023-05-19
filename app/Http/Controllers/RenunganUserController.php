@@ -14,8 +14,9 @@ class RenunganUserController extends Controller
      */
     public function index()
     {
-        $data = Renungan::all();
-        return view('user.renungan', compact('data'));
+        $renungans = Renungan::all();
+        // dd($renungans);
+        return view('user.renungan', compact('renungans'));
     }
 
     /**

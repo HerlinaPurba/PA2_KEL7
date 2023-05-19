@@ -36,6 +36,7 @@ class RenunganController extends Controller
         $model = new Renungan;
         $model->date = $request->date;
         $model->ayatpagi = $request->ayatpagi;
+        $model->linkpagi = $request->linkpagi;
         $model->ayatmalam = $request->ayatmalam;
         $model->save();
 
@@ -69,9 +70,10 @@ class RenunganController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $model =  Renungan::find($id);
+        $model = Renungan::find($id);
         $model->date = $request->date;
         $model->ayatpagi = $request->ayatpagi;
+        $model->linkpagi = $request->linkpagi;
         $model->ayatmalam = $request->ayatmalam;
         $model->save();
 

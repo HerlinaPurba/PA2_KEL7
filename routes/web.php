@@ -51,10 +51,10 @@ Route::get('/', function () {
 
 
 // Route::get('login',[LoginController::class,'login'])->name('login');
-Route::controller(LoginController::class)->group(function(){
-   Route::get('login','login')->name('login');
-   Route::post('login/proses','proses');
-   Route::get('logout', 'logout');
+Route::controller(LoginController::class)->group(function () {
+    Route::get('login', 'login')->name('login');
+    Route::post('login/proses', 'proses');
+    Route::get('logout', 'logout');
 
 });
 
@@ -62,16 +62,16 @@ Route::get('/registrasi', [RegistrasiController::class, 'registrasi']);
 Route::post('/registrasiproses', [RegistrasiController::class, 'registerProses'])->name('registrasi-proses');
 
 //admin
-Route::group(['middleware' => ['auth']], function(){
-    Route::group(['middleware' => ['cekUserLogin:admin']], function(){
+Route::group(['middleware' => ['auth']], function () {
+    Route::group(['middleware' => ['cekUserLogin:admin']], function () {
         Route::resource('dashboard', dashboard::class);
-        Route::resource('matedorm', DormMateController::class );
-        Route::resource('evaluation', EvaluationController::class );
-        Route::resource('kurvey', KurveController::class );
-        Route::resource('kurvemassal', KurveMassalController::class );
-        Route::resource('renungan', RenunganController::class );
-        Route::resource('alergi', AlergiController::class );
-        Route::resource('datadok', DokumenController::class );
+        Route::resource('matedorm', DormMateController::class);
+        Route::resource('evaluation', EvaluationController::class);
+        Route::resource('kurvey', KurveController::class);
+        Route::resource('kurvemassal', KurveMassalController::class);
+        Route::resource('renungan', RenunganController::class);
+        Route::resource('alergi', AlergiController::class);
+        Route::resource('datadok', DokumenController::class);
 
 
         Route::get('sakit', function () {
@@ -86,44 +86,44 @@ Route::group(['middleware' => ['auth']], function(){
     });
 
 
-//user
-    Route::group(['middleware' => ['cekUserLogin:user']], function(){
+    //user
+    Route::group(['middleware' => ['cekUserLogin:user']], function () {
         Route::resource('beranda', beranda::class);
         Route::get('halamankamar', function () {
             return view('user.halamankamar');
         });
 
         //data kamar
-        Route::resource('kamarrusun1', KamarRusun1Controller::class );
-        Route::resource('kamarrusun2', KamarRusun2Controller::class );
-        Route::resource('kamarrusun3', KamarRusun3Controller::class );
-        Route::resource('kamarrusun4', KamarRusun4Controller::class );
-        Route::resource('kamarpniel', KamarPnielController::class );
-        Route::resource('kamarsilo', KamarSiloController::class );
-        Route::resource('kamarkapernaum', KamarKapernaumController::class );
-        Route::resource('kamardantob', KamarDanTobController::class );
+        Route::resource('kamarrusun1', KamarRusun1Controller::class);
+        Route::resource('kamarrusun2', KamarRusun2Controller::class);
+        Route::resource('kamarrusun3', KamarRusun3Controller::class);
+        Route::resource('kamarrusun4', KamarRusun4Controller::class);
+        Route::resource('kamarpniel', KamarPnielController::class);
+        Route::resource('kamarsilo', KamarSiloController::class);
+        Route::resource('kamarkapernaum', KamarKapernaumController::class);
+        Route::resource('kamardantob', KamarDanTobController::class);
 
         //kurve
-        Route::resource('kurverusun1', KurveHarianUserController::class );
-        Route::resource('kurverusun2', KurveHarianRusun2Controller::class );
-        Route::resource('kurverusun3', KurveHarianRusun3Controller::class );
-        Route::resource('kurverusun4', KurveHarianRusun4Controller::class );
-        Route::resource('kurvepniel', KurveHarianPnielController::class );
-        Route::resource('kurvesilo', KurveHarianSiloController::class );
-        Route::resource('kurvekapernaum', KurveHarianKapernaumController::class );
-        Route::resource('kurvedantob', KurveHarianDantobController::class );
-        Route::resource('kurvemassal', KurveMassalUserController::class );
+        Route::resource('kurverusun1', KurveHarianUserController::class);
+        Route::resource('kurverusun2', KurveHarianRusun2Controller::class);
+        Route::resource('kurverusun3', KurveHarianRusun3Controller::class);
+        Route::resource('kurverusun4', KurveHarianRusun4Controller::class);
+        Route::resource('kurvepniel', KurveHarianPnielController::class);
+        Route::resource('kurvesilo', KurveHarianSiloController::class);
+        Route::resource('kurvekapernaum', KurveHarianKapernaumController::class);
+        Route::resource('kurvedantob', KurveHarianDantobController::class);
+        Route::resource('kurvemassal', KurveMassalUserController::class);
 
         //renungan
-        Route::resource('renungan', RenunganUserController::class );
+        Route::resource('ibadah', RenunganUserController::class);
 
         //dokumen
-        Route::resource('document', DokumenUserController::class );
+        Route::resource('document', DokumenUserController::class);
 
         //alergi
-        Route::resource('alergic', AlergiUserController::class );
+        Route::resource('alergic', AlergiUserController::class);
 
-         Route::get('kurveyharian', function () {
+        Route::get('kurveyharian', function () {
             return view('user.kurveyharian');
         });
 
@@ -135,9 +135,6 @@ Route::group(['middleware' => ['auth']], function(){
         Route::get('sakit', function () {
             return view('user.sakit');
         });
-
-        // //download pdf
-        // Route::get('/download-pdf', 'PDFControllerUser@downloadPDF')->name('Tabel Pembagian Waktu.pdf');
 
 
         //rules of dorm
@@ -170,8 +167,3 @@ Route::group(['middleware' => ['auth']], function(){
 
     });
 });
-
-
-
-
-

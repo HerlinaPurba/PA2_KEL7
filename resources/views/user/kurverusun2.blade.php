@@ -22,10 +22,10 @@
     <!-- Vendor CSS Files -->
     <link href="admin-asset/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="admin-asset/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-
+    <link href="admin-asset/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="admin-asset/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="admin-asset/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
     <link href="admin-asset/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    {{-- <link href="admin-asset/assets/vendor/simple-datatables/style.css" rel="stylesheet"> --}}
-
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.bootstrap5.min.css">
 
@@ -84,10 +84,6 @@
         </section>
 
     </main><!-- End #main -->
-
-
-
-
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="">
@@ -98,24 +94,23 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Vendor JS Files -->
-    {{-- <script src="{{ $totalAspaAspi->cdn() }}"></script>
-  {{ $totalAspaAspi->script() }} --}}
-
-
-    <script src="admin-asset/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="admin-asset/assets/js/main.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
         integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+    <script src="admin-asset/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="admin-asset/assets/vendor/tinymce/tinymce.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.bootstrap5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>s
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+
     <!-- Template Main JS File -->
+    <script src="admin-asset/assets/js/main.js"></script>
     <script>
         $(document).ready(function() {
             $('#datatable').DataTable({
@@ -123,7 +118,7 @@
                 buttons: [{
                     "extend": 'pdfHtml5',
                     "text": 'Download',
-                    "className": 'btn-warning'
+                    "className": 'btn-warning text-white'
                 }],
 
             })
