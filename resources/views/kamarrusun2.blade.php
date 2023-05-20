@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Alergi</title>
+    <title>Rusun 2</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -42,21 +42,21 @@
         <section class="section">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Mahasiswa Alergi</h5>
-                    <a class="btn btn-primary" href="beranda" role="button">Kembali</a>
+                    <h5 class="card-title">Kamar Rusun 2</h5>
+                    <a class="btn btn-primary" href="guest-halamankamar" role="button">Kembali</a>
 
                     <br>
 
                     <!-- Table with stripped rows -->
                     <br>
-                    <table class="table datatable" id="datatable">
+                    <table class="table datatable" id="datatable"><br>
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">NIM</th>
                                 <th scope="col">Nama</th>
-                                <th scope="col">Alergi</th>
-
+                                <th scope="col">Prodi</th>
+                                <th scope="col">Angkatan</th>
+                                <th scope="col">Nomor Kamar</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -64,15 +64,16 @@
                             @foreach ($data as $data)
                                 <tr>
                                     <th scope="row">{{ $no++ }}</th>
-                                    <td>{{ $data->nim }}</td>
                                     <td>{{ $data->name }}</td>
-                                    <td>{{ $data->alergi }}</td>
-
+                                    <td>{{ $data->prodi }}</td>
+                                    <td>{{ $data->angkatan }}</td>
+                                    <td>{{ $data->kamar }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
                     </table>
                     <!-- End Table with stripped rows -->
+
                 </div>
             </div>
 
@@ -81,6 +82,10 @@
         </section>
 
     </main><!-- End #main -->
+
+
+
+
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="">

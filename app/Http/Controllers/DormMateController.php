@@ -62,7 +62,7 @@ class DormMateController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $model =  DormMate::find($id);
+        $model = DormMate::find($id);
         $model->nim = $request->nim;
         $model->name = $request->name;
         $model->prodi = $request->prodi;
@@ -83,5 +83,95 @@ class DormMateController extends Controller
         $model = DormMate::find($id);
         $model->delete();
         return redirect('matedorm');
+    }
+
+    //user controller
+    public function alldata1()
+    {
+        $data = DormMate::where('asrama', 'Rusun 1')->get();
+        return view('user.kamarrusun1', compact('data'));
+    }
+    public function lihat1()
+    {
+        $data = DormMate::where('asrama', 'Rusun 1')->get();
+        return view('kamarrusun1', compact('data'));
+    }
+    public function alldata4()
+    {
+        $data = DormMate::where('asrama', 'Danau Toba')->get();
+        return view('user.kamarrusun4', compact('data'));
+    }
+
+    public function index2()
+    {
+        $data = DormMate::where('asrama', 'Rusun 2')->get();
+        return view('user.kamarrusun2', compact('data'));
+    }
+    public function lihat2()
+    {
+        $data = DormMate::where('asrama', 'Rusun 2')->get();
+        return view('kamarrusun2', compact('data'));
+    }
+
+    public function index3()
+    {
+        $data = DormMate::where('asrama', 'Rusun 3')->get();
+        return view('user.kamarrusun3', compact('data'));
+    }
+
+    public function lihat3()
+    {
+        $data = DormMate::where('asrama', 'Rusun 3')->get();
+        return view('kamarrusun3', compact('data'));
+    }
+    public function lihat4()
+    {
+        $data = DormMate::where('asrama', 'Danau Toba')->get();
+        return view('kamarrusun4', compact('data'));
+    }
+
+    public function indexdt()
+    {
+        $data = DormMate::where('asrama', 'Danau Toba')->get();
+        return view('user.kamarrusun4', compact('data'));
+    }
+
+    public function lihatdt()
+    {
+        $data = DormMate::where('asrama', 'Danau Toba')->get();
+        return view('kamarrusun4', compact('data'));
+    }
+
+    public function indexk()
+    {
+        $data = DormMate::where('asrama', 'Kapernaum')->get();
+        return view('user.kamarkapernaum', compact('data'));
+    }
+
+    public function lihatk()
+    {
+        $data = DormMate::where('asrama', 'Kapernaum')->get();
+        return view('kamarkapernaum', compact('data'));
+    }
+    public function indexp()
+    {
+        $data = DormMate::where('asrama', 'Pniel')->get();
+        return view('user.kamarpniel', compact('data'));
+    }
+    public function lihatp()
+    {
+        $data = DormMate::where('asrama', 'Pniel')->get();
+        return view('kamarpniel', compact('data'));
+    }
+
+    public function indexs()
+    {
+        $data = DormMate::where('asrama', 'Silo')->get();
+        return view('user.kamarsilo', compact('data'));
+    }
+    public function lihats()
+    {
+        $data = DormMate::where('asrama', 'Silo')->get();
+        return view('kamarsilo', compact('data'));
     }
 }

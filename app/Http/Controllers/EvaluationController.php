@@ -74,7 +74,7 @@ class EvaluationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $model =  Evaluation::find($id);
+        $model = Evaluation::find($id);
         $model->name = $request->name;
         $model->date = $request->date;
         $model->pesan = $request->pesan;
@@ -94,4 +94,47 @@ class EvaluationController extends Controller
         $model->delete();
         return redirect('evaluation');
     }
+
+    //user controller
+    public function index1()
+    {
+        $data = Evaluation::where('asrama', 'Rusun 1')->get();
+        return view('user.evalr1', compact('data'));
+    }
+    public function index2()
+    {
+        $data = Evaluation::where('asrama', 'Rusun 2')->get();
+        return view('user.evalr2', compact('data'));
+    }
+    public function index3()
+    {
+        $data = Evaluation::where('asrama', 'Rusun 3')->get();
+        return view('user.evalr2', compact('data'));
+    }
+    public function index4()
+    {
+        $data = Evaluation::where('asrama', 'Rusun 4')->get();
+        return view('user.evalr4', compact('data'));
+    }
+    public function indexp()
+    {
+        $data = Evaluation::where('asrama', 'Pniel')->get();
+        return view('user.evalp', compact('data'));
+    }
+    public function indexs()
+    {
+        $data = Evaluation::where('asrama', 'Silo')->get();
+        return view('user.evals', compact('data'));
+    }
+    public function indexk()
+    {
+        $data = Evaluation::where('asrama', 'Kapernaum')->get();
+        return view('user.evalk', compact('data'));
+    }
+    public function indexdt()
+    {
+        $data = Evaluation::where('asrama', 'Danau Toba')->get();
+        return view('user.evaldt', compact('data'));
+    }
+
 }

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Rusun 1</title>
+    <title>Renungan</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -42,7 +42,7 @@
         <section class="section">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Kamar Rusun 1</h5>
+                    <h5 class="card-title">Ayat Renungan Pagi dan Malam</h5>
                     <a class="btn btn-primary" href="beranda" role="button">Kembali</a>
 
                     <br>

@@ -69,7 +69,7 @@ class AlergiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $model =  Alergi::find($id);
+        $model = Alergi::find($id);
         $model->nim = $request->nim;
         $model->name = $request->name;
         $model->alergi = $request->alergi;
@@ -86,5 +86,18 @@ class AlergiController extends Controller
         $model = Alergi::find($id);
         $model->delete();
         return redirect('alergi');
+    }
+
+    //user controller
+    public function alldata()
+    {
+        $data = Alergi::all();
+        return view('user.alergi', compact('data'));
+    }
+
+    public function lihat()
+    {
+        $data = Alergi::all();
+        return view('alergi', compact('data'));
     }
 }

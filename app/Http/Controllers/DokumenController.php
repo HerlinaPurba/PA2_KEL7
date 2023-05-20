@@ -49,21 +49,23 @@ class DokumenController extends Controller
 
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'name_file' => 'required',
-            'file' => 'mimes:doc,docx,pdf,xlsx,xls,ppt,pptx',
-        ]
-    );
-    $datadok = $request->file('file');
-    $nama_dokumen = $request->file('file')->getClientOriginalName();
-    $datadok->move('dokumen/',$nama_dokumen);
+        $this->validate(
+            $request,
+            [
+                'name_file' => 'required',
+                'file' => 'mimes:doc,docx,pdf,xlsx,xls,ppt,pptx',
+            ]
+        );
+        $datadok = $request->file('file');
+        $nama_dokumen = $request->file('file')->getClientOriginalName();
+        $datadok->move('dokumen/', $nama_dokumen);
 
-    $model = new Dokumen;
-    $model->name_file = $request->name_file;
-    $model->file = $nama_dokumen;
-    $model->save();
-    // Session::flash('sukses', 'Data berhasil di simpan')
-    return redirect('datadok');
+        $model = new Dokumen;
+        $model->name_file = $request->name_file;
+        $model->file = $nama_dokumen;
+        $model->save();
+        // Session::flash('sukses', 'Data berhasil di simpan')
+        return redirect('datadok');
     }
 
     /**
@@ -88,21 +90,23 @@ class DokumenController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'name_file' => 'required',
-            'file' => 'mimes:doc,docx,pdf,xlsx,xls,ppt,pptx',
-        ]
-    );
-    $datadok = $request->file('file');
-    $nama_dokumen = $request->file('file')->getClientOriginalName();
-    $datadok->move('dokumen/',$nama_dokumen);
+        $this->validate(
+            $request,
+            [
+                'name_file' => 'required',
+                'file' => 'mimes:doc,docx,pdf,xlsx,xls,ppt,pptx',
+            ]
+        );
+        $datadok = $request->file('file');
+        $nama_dokumen = $request->file('file')->getClientOriginalName();
+        $datadok->move('dokumen/', $nama_dokumen);
 
-    $model =  Dokumen::find($id);
-    $model->name_file = $request->name_file;
-    $model->file = $nama_dokumen;
-    $model->save();
-    // Session::flash('sukses', 'Data berhasil di simpan')
-    return redirect('datadok');
+        $model = Dokumen::find($id);
+        $model->name_file = $request->name_file;
+        $model->file = $nama_dokumen;
+        $model->save();
+        // Session::flash('sukses', 'Data berhasil di simpan')
+        return redirect('datadok');
     }
 
     /**
@@ -113,5 +117,12 @@ class DokumenController extends Controller
         $model = Dokumen::find($id);
         $model->delete();
         return redirect('datadok');
+    }
+
+    //dokumen user controller
+    public function alldata()
+    {
+        $data = Dokumen::all();
+        return view('user.dokumen', compact('data'));
     }
 }

@@ -5,411 +5,134 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Mahasiswa Sakit</title>
+    <title>Evaluasi</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
+    <!-- Favicons -->
+    <link href="user-asset/assets/img/favicon.png" rel="icon">
+    <link href="user-asset/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="user-asset/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="user-asset/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="user-asset/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="user-asset/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="user-asset/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="user-asset/assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="formbold-main-wrapper">
-
-        <div class="formbold-form-wrapper">
-            <form action="https://formbold.com/s/FORM_ID" method="POST">
-                <div class="formbold-steps">
-                    <ul>
-                        <li class="formbold-step-menu1 active">
-                            <span>1</span>
-                            Data Diri
-                        </li>
-                        <li class="formbold-step-menu2">
-                            <span>2</span>
-                            Sakit
-                        </li>
-                        <li class="formbold-step-menu3">
-                            <span>3</span>
-                            Konfirmasi
-                        </li>
-                    </ul>
+    <main id="main">
+        <!-- ======= Services Section ======= -->
+        <section id="services" class="services section-bg">
+            <div class="container">
+                <a class="btn btn-primary" href="beranda" role="button">Kembali</a>
+                <div class="section-title">
+                    <h2>Evaluasi</h2>
+                    <h4>hasil evaluasi maupun pengumuman terlampir pada halaman ini</h4>
                 </div>
 
-                <div class="formbold-form-step-1 active">
-                    <div class="formbold-input-flex">
-                        <div>
-                            <label for="firstname" class="formbold-form-label"> NIM </label>
-                            <input type="text" name="nim" id="nim"placeholder="nim"
-                                class="formbold-form-input" required />
-                        </div>
-                        <div>
-                            <label for="lastname" class="formbold-form-label"> Nama Lengkap </label>
-                            <input type="text" name="name" id="name" placeholder="nama lengkap"
-                                class="formbold-form-input"required />
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="icon-box">
+                            <i class="bi bi-envelope-exclamation"></i>
+                            <h4><a href="#">Rusun 1</a></h4>
+                            <p></p>
                         </div>
                     </div>
-
-                    <div class="formbold-input-flex">
-                        <div>
-                            <label for="firstname" class="formbold-form-label"> Kelas </label>
-                            <input type="text" name="kelas" id="kelas" placeholder="kelas"
-                                class="formbold-form-input" required />
-                        </div>
-                        <div>
-                            <label for="dob" class="formbold-form-label"> Tanggal </label>
-                            <input type="date" name="dob" id="date" class="formbold-form-input" required />
+                    <div class="col-md-6 mt-4 mt-lg-0">
+                        <div class="icon-box">
+                            <i class="bi bi-envelope-exclamation-fill"></i>
+                            <h4><a href="alergi">Rusun 2</a></h4>
+                            <p></p>
                         </div>
                     </div>
-
-                    <div>
-                        <label for="address" class="formbold-form-label"> Mata Kuliah dan Dosen </label>
-                        <textarea type="text" name="dosen" id="dosen" class="formbold-form-input" required></textarea>
+                    <div class="col-md-6 mt-4">
+                        <div class="icon-box">
+                            <i class="bi bi-envelope-exclamation"></i>
+                            <h4><a href="sakit">Rusun 3</a></h4>
+                            <p></p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="formbold-form-step-2">
-                    <div>
-                        <label for="message" class="formbold-form-label"> Message </label>
-                        <textarea rows="6" name="message" id="message" placeholder="Type your message" class="formbold-form-input"
-                            required></textarea>
+                    <div class="col-md-6 mt-4">
+                        <div class="icon-box">
+                            <i class="bi bi-envelope-exclamation-fill"></i>
+                            <h4><a href="dokumen">Rusun 4</a></h4>
+                            <p></p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="formbold-form-step-3">
-                    <div class="formbold-form-confirm">
-                        <p>
-                            Berdasarkan data tersebut diatas, saya menyatakan bahwa saya jujur dan secara sadar
-                            mengisinya
-                        </p>
-
-                        <div>
-                            <button class="formbold-confirm-btn active">
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="11" cy="11" r="10.5" fill="white"
-                                        stroke="#DDE3EC" />
-                                    <g clip-path="url(#clip0_1667_1314)">
-                                        <path
-                                            d="M9.83343 12.8509L15.1954 7.48828L16.0208 8.31311L9.83343 14.5005L6.12109 10.7882L6.94593 9.96336L9.83343 12.8509Z"
-                                            fill="#536387" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_1667_1314">
-                                            <rect width="14" height="14" fill="white"
-                                                transform="translate(4 4)" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                                Ya
-                            </button>
-
-                            <button class="formbold-confirm-btn">
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="11" cy="11" r="10.5" fill="white"
-                                        stroke="#DDE3EC" />
-                                    <g clip-path="url(#clip0_1667_1314)">
-                                        <path
-                                            d="M9.83343 12.8509L15.1954 7.48828L16.0208 8.31311L9.83343 14.5005L6.12109 10.7882L6.94593 9.96336L9.83343 12.8509Z"
-                                            fill="#536387" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_1667_1314">
-                                            <rect width="14" height="14" fill="white"
-                                                transform="translate(4 4)" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                                Tidak
-                            </button>
+                    <div class="col-md-6 mt-4">
+                        <div class="icon-box">
+                            <i class="bi bi-envelope-exclamation"></i>
+                            <h4><a href="#">Pniel</a></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4">
+                        <div class="icon-box">
+                            <i class="bi bi-envelope-exclamation-fill"></i>
+                            <h4><a href="#">Silo</a></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4">
+                        <div class="icon-box">
+                            <i class="bi bi-envelope-exclamation"></i>
+                            <h4><a href="#">Kapernaum</a></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4">
+                        <div class="icon-box">
+                            <i class="bi bi-envelope-exclamation-fill"></i>
+                            <h4><a href="#">Antiokhia</a></h4>
+                            <p></p>
                         </div>
                     </div>
                 </div>
 
-                <div class="formbold-form-btn-wrapper">
-                    <button class="formbold-back-btn">
-                        Kembali
-                    </button>
+            </div>
+        </section><!-- End Services Section -->
+    </main><!-- End #main -->
 
-                    <button class="formbold-btn">
-                        Selanjutnya
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_1675_1807)">
-                                <path
-                                    d="M10.7814 7.33312L7.20541 3.75712L8.14808 2.81445L13.3334 7.99979L8.14808 13.1851L7.20541 12.2425L10.7814 8.66645H2.66675V7.33312H10.7814Z"
-                                    fill="white" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_1675_1807">
-                                    <rect width="16" height="16" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </button>
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+
+
+        <div class="container d-md-flex py-4">
+
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>PA II KEL 07</span></strong>. All Rights Reserved
                 </div>
-            </form>
-        </div>
-    </div>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+            </div>
+    </footer><!-- End Footer -->
 
-        body {
-            font-family: "Inter", sans-serif;
-        }
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
 
-        .formbold-main-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 48px;
-        }
+    <!-- Vendor JS Files -->
+    <script src="user-asset/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="user-asset/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="user-asset/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="user-asset/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="user-asset/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="user-asset/assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="user-asset/assets/vendor/php-email-form/validate.js"></script>
 
-        .formbold-form-wrapper {
-            margin: 0 auto;
-            max-width: 550px;
-            width: 100%;
-            background: white;
-        }
-
-        .formbold-steps {
-            padding-bottom: 18px;
-            margin-bottom: 35px;
-            border-bottom: 1px solid #DDE3EC;
-        }
-
-        .formbold-steps ul {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            display: flex;
-            gap: 40px;
-        }
-
-        .formbold-steps li {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 24px;
-            color: #536387;
-        }
-
-        .formbold-steps li span {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #DDE3EC;
-            border-radius: 50%;
-            width: 36px;
-            height: 36px;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 24px;
-            color: #536387;
-        }
-
-        .formbold-steps li.active {
-            color: #07074D;
-            ;
-        }
-
-        .formbold-steps li.active span {
-            background: #6A64F1;
-            color: #FFFFFF;
-        }
-
-        .formbold-input-flex {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 22px;
-        }
-
-        .formbold-input-flex>div {
-            width: 50%;
-        }
-
-        .formbold-form-input {
-            width: 100%;
-            padding: 13px 22px;
-            border-radius: 5px;
-            border: 1px solid #DDE3EC;
-            background: #FFFFFF;
-            font-weight: 500;
-            font-size: 16px;
-            color: #536387;
-            outline: none;
-            resize: none;
-        }
-
-        .formbold-form-input:focus {
-            border-color: #6a64f1;
-            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
-        }
-
-        .formbold-form-label {
-            color: #07074D;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 24px;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .formbold-form-confirm {
-            border-bottom: 1px solid #DDE3EC;
-            padding-bottom: 35px;
-        }
-
-        .formbold-form-confirm p {
-            font-size: 16px;
-            line-height: 24px;
-            color: #536387;
-            margin-bottom: 22px;
-            width: 75%;
-        }
-
-        .formbold-form-confirm>div {
-            display: flex;
-            gap: 15px;
-        }
-
-        .formbold-confirm-btn {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: #FFFFFF;
-            border: 0.5px solid #DDE3EC;
-            border-radius: 5px;
-            font-size: 16px;
-            line-height: 24px;
-            color: #536387;
-            cursor: pointer;
-            padding: 10px 20px;
-            transition: all .3s ease-in-out;
-        }
-
-        .formbold-confirm-btn {
-            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
-        }
-
-        .formbold-confirm-btn.active {
-            background: #6A64F1;
-            color: #FFFFFF;
-        }
-
-        .formbold-form-step-1,
-        .formbold-form-step-2,
-        .formbold-form-step-3 {
-            display: none;
-        }
-
-        .formbold-form-step-1.active,
-        .formbold-form-step-2.active,
-        .formbold-form-step-3.active {
-            display: block;
-        }
-
-        .formbold-form-btn-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            gap: 25px;
-            margin-top: 25px;
-        }
-
-        .formbold-back-btn {
-            cursor: pointer;
-            background: #FFFFFF;
-            border: none;
-            color: #07074D;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 24px;
-            display: none;
-        }
-
-        .formbold-back-btn.active {
-            display: block;
-        }
-
-        .formbold-btn {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 16px;
-            border-radius: 5px;
-            padding: 10px 25px;
-            border: none;
-            font-weight: 500;
-            background-color: #6A64F1;
-            color: white;
-            cursor: pointer;
-        }
-
-        .formbold-btn:hover {
-            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
-        }
-    </style>
-    <script>
-        const stepMenuOne = document.querySelector('.formbold-step-menu1')
-        const stepMenuTwo = document.querySelector('.formbold-step-menu2')
-        const stepMenuThree = document.querySelector('.formbold-step-menu3')
-
-        const stepOne = document.querySelector('.formbold-form-step-1')
-        const stepTwo = document.querySelector('.formbold-form-step-2')
-        const stepThree = document.querySelector('.formbold-form-step-3')
-
-        const formSubmitBtn = document.querySelector('.formbold-btn')
-        const formBackBtn = document.querySelector('.formbold-back-btn')
-
-        formSubmitBtn.addEventListener("click", function(event) {
-            event.preventDefault()
-            if (stepMenuOne.className == 'formbold-step-menu1 active') {
-                event.preventDefault()
-
-                stepMenuOne.classList.remove('active')
-                stepMenuTwo.classList.add('active')
-
-                stepOne.classList.remove('active')
-                stepTwo.classList.add('active')
-
-                formBackBtn.classList.add('active')
-                formBackBtn.addEventListener("click", function(event) {
-                    event.preventDefault()
-
-                    stepMenuOne.classList.add('active')
-                    stepMenuTwo.classList.remove('active')
-
-                    stepOne.classList.add('active')
-                    stepTwo.classList.remove('active')
-
-                    formBackBtn.classList.remove('active')
-
-                })
-
-            } else if (stepMenuTwo.className == 'formbold-step-menu2 active') {
-                event.preventDefault()
-
-                stepMenuTwo.classList.remove('active')
-                stepMenuThree.classList.add('active')
-
-                stepTwo.classList.remove('active')
-                stepThree.classList.add('active')
-
-                formBackBtn.classList.remove('active')
-                formSubmitBtn.textContent = 'Submit'
-            } else if (stepMenuThree.className == 'formbold-step-menu3 active') {
-                document.querySelector('form').submit()
-            }
-        })
-    </script>
+    <!-- Template Main JS File -->
+    <script src="user-asset/assets/js/main.js"></script>
 
 </body>
 

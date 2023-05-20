@@ -45,56 +45,56 @@
                     <div class="col-md-6">
                         <div class="icon-box">
                             <i class="bi bi-envelope-exclamation"></i>
-                            <h4><a href="#">Rusun 1</a></h4>
+                            <h4><a href="evalr1">Rusun 1</a></h4>
                             <p></p>
                         </div>
                     </div>
                     <div class="col-md-6 mt-4 mt-lg-0">
                         <div class="icon-box">
                             <i class="bi bi-envelope-exclamation-fill"></i>
-                            <h4><a href="alergi">Rusun 2</a></h4>
+                            <h4><a href="evalr2">Rusun 2</a></h4>
                             <p></p>
                         </div>
                     </div>
                     <div class="col-md-6 mt-4">
                         <div class="icon-box">
                             <i class="bi bi-envelope-exclamation"></i>
-                            <h4><a href="sakit">Rusun 3</a></h4>
+                            <h4><a href="evalr3">Rusun 3</a></h4>
                             <p></p>
                         </div>
                     </div>
                     <div class="col-md-6 mt-4">
                         <div class="icon-box">
                             <i class="bi bi-envelope-exclamation-fill"></i>
-                            <h4><a href="dokumen">Rusun 4</a></h4>
+                            <h4><a href="evalr4">Rusun 4</a></h4>
                             <p></p>
                         </div>
                     </div>
                     <div class="col-md-6 mt-4">
                         <div class="icon-box">
                             <i class="bi bi-envelope-exclamation"></i>
-                            <h4><a href="#">Pniel</a></h4>
+                            <h4><a href="evalp">Pniel</a></h4>
                             <p></p>
                         </div>
                     </div>
                     <div class="col-md-6 mt-4">
                         <div class="icon-box">
                             <i class="bi bi-envelope-exclamation-fill"></i>
-                            <h4><a href="#">Silo</a></h4>
+                            <h4><a href="evals">Silo</a></h4>
                             <p></p>
                         </div>
                     </div>
                     <div class="col-md-6 mt-4">
                         <div class="icon-box">
                             <i class="bi bi-envelope-exclamation"></i>
-                            <h4><a href="#">Kapernaum</a></h4>
+                            <h4><a href="evalk">Kapernaum</a></h4>
                             <p></p>
                         </div>
                     </div>
                     <div class="col-md-6 mt-4">
                         <div class="icon-box">
                             <i class="bi bi-envelope-exclamation-fill"></i>
-                            <h4><a href="#">Antiokhia</a></h4>
+                            <h4><a href="evaldt">Antiokhia</a></h4>
                             <p></p>
                         </div>
                     </div>

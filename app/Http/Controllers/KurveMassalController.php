@@ -71,7 +71,7 @@ class KurveMassalController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $model =  KurveyMassal::find($id);
+        $model = KurveyMassal::find($id);
         $model->prodi3 = $request->prodi3;
         $model->angkatan = $request->angkatan;
         $model->lokasi = $request->lokasi;
@@ -88,5 +88,12 @@ class KurveMassalController extends Controller
         $model = KurveyMassal::find($id);
         $model->delete();
         return redirect('kurvemassal');
+    }
+
+    //user controller
+    public function indexuser()
+    {
+        $data = KurveyMassal::all();
+        return view('user.kurvemassal', compact('data'));
     }
 }

@@ -72,7 +72,7 @@
 
                     <li class="dropdown"><a href="#"><span>Data Dorm</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="datadorm">Data Evaluation</a></li>
+                            <li><a href="eval">Data Evaluation</a></li>
                             <li><a href="#dataasrama">Data Mahasiswa Sakit</a></li>
                             <li><a href="#dataasrama">Data Mahasiswa Alergi</a></li>
                             <li><a href="#dataasrama">Dokumen</a></li>
@@ -130,7 +130,7 @@
                     data-aos-delay="400">
                     <div class="icon-box">
                         <div class="icon"><i class="ri-file-copy-2-line"></i></div>
-                        <h4 class="title"><a href="datadorm">Evaluasi</a></h4>
+                        <h4 class="title"><a href="eval">Evaluasi</a></h4>
                         <p class="description">Evaluasi mahasiswa merupakan kegiatan rutin asrama yang dilakukan guna
                             mengevaluasi program/rutinitas mahasiswa di asrama.</p>
                     </div>
@@ -231,8 +231,6 @@
 
                     <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
                         <div class="count-box">
-                            {{-- <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="2" class="purecounter"></span>
-            <p>Awards</p> --}}
                         </div>
                     </div>
 
@@ -568,9 +566,9 @@
 
                 <div class="section-title">
                     <h2>Tata Tertib dan Aturan Asrama</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <p>Asrama IT Del adalah tempat tinggal warga asrama yang juga berfungsi sebagai tempat pembentukan
+                        karakter mahasiswa dan mahasiswa IT Del wajibb mengikuti ketentuan, tata tertib dan aturan yang
+                        telah ditetapkan</p>
                 </div>
 
                 <div class="row">
@@ -738,19 +736,16 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2>Portfolio</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <h2>Kegiatan Program Keasramaan</h2>
                 </div>
 
                 <div class="row" data-aos="fade-up" data-aos-delay="150">
                     <div class="col-lg-12 d-flex justify-content-center">
                         <ul id="portfolio-flters">
                             <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-app">App</li>
-                            <li data-filter=".filter-card">Card</li>
-                            <li data-filter=".filter-web">Web</li>
+                            <li data-filter=".filter-app">Refreshing</li>
+                            <li data-filter=".filter-card">Retreat</li>
+                            <li data-filter=".filter-web">Student Leadership</li>
                         </ul>
                     </div>
                 </div>
@@ -759,15 +754,14 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+                            <img src="images/1.jpeg" class="img-fluid" alt="">
                             <div class="portfolio-info">
-                                <h4>App 1</h4>
-                                <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
-                                        class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i
-                                            class="bx bx-link"></i></a>
+                                    <a href="images/1.jpeg" data-gallery="portfolioGallery"
+                                        class="portfolio-lightbox"
+                                        title="menjalin kerjasama mahasiswa melalui kegiatan permainan (games) "><i
+                                            class="bx bx-plus"></i></a>
+                                    <a href="halamanasrama" title="More Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -791,15 +785,13 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+                            <img src="images/2.jpeg" class="img-fluid" alt="">
                             <div class="portfolio-info">
-                                <h4>App 2</h4>
-                                <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
-                                        class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i
-                                            class="bx bx-link"></i></a>
+                                    <a href="images/2.jpeg" data-gallery="portfolioGallery"
+                                        class="portfolio-lightbox" title="Belajar nilai-nilai karakter"><i
+                                            class="bx bx-plus"></i></a>
+                                    <a href="halamanasrama" title="More Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -853,17 +845,15 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+                            <img src="images/3.jpeg" class="img-fluid" alt="">
                             <div class="portfolio-info">
-                                <h4>Card 1</h4>
-                                <p>Card</p>
                                 <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
-                                        class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i
-                                            class="bx bx-link"></i></a>
+                                    <a href="images/3.jpeg" data-gallery="portfolioGallery"
+                                        class="portfolio-lightbox" title="Kegiatan kebersihan"><i
+                                            class="bx bx-plus"></i></a>
+                                    <a href="halamanasrama" title=""><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -930,7 +920,7 @@
 
                             </ul>
                             <div class="btn-wrap">
-                                <a href="{{ route('alergic.index') }}" class="btn-buy">Lihat</a>
+                                <a href="alergic" class="btn-buy">Lihat</a>
                             </div>
                         </div>
                     </div>
@@ -961,7 +951,7 @@
                                 <br>
                             </ul>
                             <div class="btn-wrap">
-                                <a href="{{ route('document.index') }}" class="btn-buy">Lihat</a>
+                                <a href="document" class="btn-buy">Lihat</a>
                             </div>
                         </div>
                     </div>

@@ -44,7 +44,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Aturan Umum Asrama</h5>
-                    <a class="btn btn-primary" href="beranda" role="button">Kembali</a>
+                    <a class="btn btn-primary" href="{{ url('/') }}" role="button">Kembali</a>
                     {{-- <button class="btn btn-warning" type="button" onclick="createPDF()">Download</button> --}}
                     <br>
                     <br>

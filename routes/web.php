@@ -3,16 +3,6 @@
 use App\Http\Controllers\beranda;
 use App\Http\Controllers\dashboard;
 use App\Http\Controllers\DokumenController;
-use App\Http\Controllers\DokumenUserController;
-use App\Http\Controllers\KurveHarianUserController;
-use App\Http\Controllers\KurveHarianDantobController;
-use App\Http\Controllers\KurveHarianKapernaumController;
-use App\Http\Controllers\KurveHarianSiloController;
-use App\Http\Controllers\KurveHarianPnielController;
-use App\Http\Controllers\KurveHarianRusun2Controller;
-use App\Http\Controllers\KurveHarianRusun3Controller;
-use App\Http\Controllers\KurveHarianRusun4Controller;
-use App\Http\Controllers\KurveMassalUserController;
 use App\Http\Controllers\RenunganUserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
@@ -23,16 +13,8 @@ use App\Http\Controllers\KurveController;
 use App\Http\Controllers\KurveMassalController;
 use App\Http\Controllers\RenunganController;
 use App\Http\Controllers\AlergiController;
-use App\Http\Controllers\AlergiUserController;
-use App\Http\Controllers\KamarRusun1Controller;
-use App\Http\Controllers\KamarRusun2Controller;
-use App\Http\Controllers\KamarRusun3Controller;
-use App\Http\Controllers\KamarRusun4Controller;
-use App\Http\Controllers\KamarPnielController;
-use App\Http\Controllers\KamarSiloController;
-use App\Http\Controllers\KamarKapernaumController;
-use App\Http\Controllers\KamarDanTobController;
-use App\Http\Controllers\PDFControllerUser;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -48,7 +30,25 @@ use App\Http\Controllers\PDFControllerUser;
 Route::get('/', function () {
     return view('welcome');
 });
-
+//rules of dorm
+Route::get('guest-aturanumum', function () {
+    return view('aturanumum');
+});
+//data kamar
+Route::get('guest-halamankamar', function () {
+    return view('kamar');
+});
+//data kamar
+Route::get('guest-kamarrusun1', [DormMateController::class, 'lihat1'])->name('lihat1');
+Route::get('guest-kamarrusun2', [DormMateController::class, 'lihat2'])->name('lihat2');
+Route::get('guest-kamarrusun3', [DormMateController::class, 'lihat3'])->name('lihat3');
+Route::get('guest-kamarrusun4', [DormMateController::class, 'lihat4'])->name('lihat4');
+Route::get('guest-kamarpniel', [DormMateController::class, 'lihatp'])->name('lihatp');
+Route::get('guest-kamarsilo', [DormMateController::class, 'lihats'])->name('lihats');
+Route::get('guest-kamarkapernaum', [DormMateController::class, 'lihatk'])->name('lihatk');
+Route::get('guest-kamardantob', [DormMateController::class, 'lihatdt'])->name('lihatdt');
+//alergi
+Route::get('guest-alergic', [AlergiController::class, 'lihat'])->name('lihat');
 
 // Route::get('login',[LoginController::class,'login'])->name('login');
 Route::controller(LoginController::class)->group(function () {
@@ -79,10 +79,6 @@ Route::group(['middleware' => ['auth']], function () {
         });
 
 
-        // Route::get('datadok', function () {
-        //     return view('admin.datadokumen.datadok');
-        // });
-
     });
 
 
@@ -94,42 +90,52 @@ Route::group(['middleware' => ['auth']], function () {
         });
 
         //data kamar
-        Route::resource('kamarrusun1', KamarRusun1Controller::class);
-        Route::resource('kamarrusun2', KamarRusun2Controller::class);
-        Route::resource('kamarrusun3', KamarRusun3Controller::class);
-        Route::resource('kamarrusun4', KamarRusun4Controller::class);
-        Route::resource('kamarpniel', KamarPnielController::class);
-        Route::resource('kamarsilo', KamarSiloController::class);
-        Route::resource('kamarkapernaum', KamarKapernaumController::class);
-        Route::resource('kamardantob', KamarDanTobController::class);
+        Route::get('kamarrusun1', [DormMateController::class, 'index1'])->name('index1');
+        Route::get('kamarrusun2', [DormMateController::class, 'index2'])->name('index2');
+        Route::get('kamarrusun3', [DormMateController::class, 'index3'])->name('index3');
+        Route::get('kamarrusun4', [DormMateController::class, 'index4'])->name('index4');
+        Route::get('kamarpniel', [DormMateController::class, 'indexp'])->name('indexp');
+        Route::get('kamarsilo', [DormMateController::class, 'indexs'])->name('indexs');
+        Route::get('kamarkapernaum', [DormMateController::class, 'indexk'])->name('indexk');
+        Route::get('kamardantob', [DormMateController::class, 'indexdt'])->name('indexdt');
 
         //kurve
-        Route::resource('kurverusun1', KurveHarianUserController::class);
-        Route::resource('kurverusun2', KurveHarianRusun2Controller::class);
-        Route::resource('kurverusun3', KurveHarianRusun3Controller::class);
-        Route::resource('kurverusun4', KurveHarianRusun4Controller::class);
-        Route::resource('kurvepniel', KurveHarianPnielController::class);
-        Route::resource('kurvesilo', KurveHarianSiloController::class);
-        Route::resource('kurvekapernaum', KurveHarianKapernaumController::class);
-        Route::resource('kurvedantob', KurveHarianDantobController::class);
-        Route::resource('kurvemassal', KurveMassalUserController::class);
+        Route::get('kurverusun1', [KurveController::class, 'index1'])->name('index1');
+        Route::get('kurverusun2', [KurveController::class, 'index2'])->name('index2');
+        Route::get('kurverusun3', [KurveController::class, 'index3'])->name('index3');
+        Route::get('kurverusun4', [KurveController::class, 'index4'])->name('index4');
+        Route::get('kurvepniel', [KurveController::class, 'indexp'])->name('indexp');
+        Route::get('kurvesilo', [KurveController::class, 'indexs'])->name('indexs');
+        Route::get('kurvekapernaum', [KurveController::class, 'indexk'])->name('indexk');
+        Route::get('kurvedantob', [KurveController::class, 'indexdt'])->name('indexdt');
+        Route::get('kurvemassal', [KurveMassalController::class, 'indexuser'])->name('indexuser');
 
         //renungan
-        Route::resource('ibadah', RenunganUserController::class);
+        Route::get('ibadah', [RenunganController::class, 'indexuser'])->name('indexuser');
 
         //dokumen
-        Route::resource('document', DokumenUserController::class);
+        Route::get('document', [DokumenController::class, 'alldata'])->name('alldata');
 
         //alergi
-        Route::resource('alergic', AlergiUserController::class);
+        Route::get('alergic', [AlergiController::class, 'alldata'])->name('alldata');
 
         Route::get('kurveyharian', function () {
             return view('user.kurveyharian');
         });
 
-        Route::get('datadorm', function () {
+        //evaluasi
+        Route::get('eval', function () {
             return view('user.evaluation');
         });
+        Route::get('evalr1', [EvaluationController::class, 'index1'])->name('index1');
+        Route::get('evalr2', [EvaluationController::class, 'index2'])->name('index2');
+        Route::get('evalr3', [EvaluationController::class, 'index3'])->name('index3');
+        Route::get('evalr4', [EvaluationController::class, 'index4'])->name('index4');
+        Route::get('evalp', [EvaluationController::class, 'indexp'])->name('indexp');
+        Route::get('evals', [EvaluationController::class, 'indexs'])->name('indexs');
+        Route::get('evalk', [EvaluationController::class, 'indexk'])->name('indexk');
+        Route::get('evaldt', [EvaluationController::class, 'indexdt'])->name('indexdt');
+
 
         // sakit
         Route::get('sakit', function () {

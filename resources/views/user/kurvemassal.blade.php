@@ -26,7 +26,8 @@
     <link href="admin-asset/assets/vendor/quill/quill.snow.css" rel="stylesheet">
     <link href="admin-asset/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
     <link href="admin-asset/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="admin-asset/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.bootstrap5.min.css">
 
     <!-- Template Main CSS File -->
     <link href="admin-asset/assets/css/style.css" rel="stylesheet">
@@ -43,12 +44,12 @@
                 <div class="card-body">
                     <h5 class="card-title">Jadwal Kurve Massal</h5>
                     <a class="btn btn-primary" href="kurveyharian" role="button">Kembali</a>
-                    <button class="btn btn-warning" type="">Download</button>
+
                     <br>
 
                     <!-- Table with stripped rows -->
                     <br>
-                    <table class="table datatable">
+                    <table class="table datatable" id="datatable">
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
@@ -82,7 +83,6 @@
         </section>
 
     </main><!-- End #main -->
-
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="">
@@ -93,22 +93,36 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Vendor JS Files -->
-    {{-- <script src="{{ $totalAspaAspi->cdn() }}"></script>
-  {{ $totalAspaAspi->script() }} --}}
 
-    <script src="admin-asset/assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+        integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
     <script src="admin-asset/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="admin-asset/assets/vendor/chart.js/chart.umd.js"></script>
-    <script src="admin-asset/assets/vendor/echarts/echarts.min.js"></script>
-    <script src="admin-asset/assets/vendor/quill/quill.min.js"></script>
-    <script src="admin-asset/assets/vendor/simple-datatables/simple-datatables.js"></script>
+
+
     <script src="admin-asset/assets/vendor/tinymce/tinymce.min.js"></script>
-    <script src="admin-asset/assets/vendor/php-email-form/validate.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
 
     <!-- Template Main JS File -->
     <script src="admin-asset/assets/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#datatable').DataTable({
+                dom: 'Bfrtip',
+                buttons: [{
+                    "extend": 'pdfHtml5',
+                    "text": 'Download',
+                    "className": 'btn-warning text-white'
+                }],
 
+            })
+        });
+    </script>
 </body>
 
 </html>

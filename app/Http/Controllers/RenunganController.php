@@ -89,4 +89,12 @@ class RenunganController extends Controller
         $model->delete();
         return redirect('renungan');
     }
+
+    //user controller
+    public function indexuser()
+    {
+        $renungans = Renungan::all();
+        // dd($renungans);
+        return view('user.renungan', compact('renungans'));
+    }
 }

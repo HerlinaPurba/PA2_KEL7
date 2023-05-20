@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Alergi</title>
+    <title>Evaluasi Kapernaum</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -42,7 +42,7 @@
         <section class="section">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Mahasiswa Alergi</h5>
+                    <h5 class="card-title">Evaluasi Kapernaum</h5>
                     <a class="btn btn-primary" href="beranda" role="button">Kembali</a>
 
                     <br>
@@ -53,26 +53,26 @@
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">NIM</th>
-                                <th scope="col">Nama</th>
-                                <th scope="col">Alergi</th>
-
+                                <th scope="col">Pemberi Evaluasi</th>
+                                <th scope="col">Pesan</th>
+                                <th scope="col">Tanggal</th>
                             </tr>
                         </thead>
                         <tbody>
+
                             @php $no = 1; @endphp
                             @foreach ($data as $data)
                                 <tr>
                                     <th scope="row">{{ $no++ }}</th>
-                                    <td>{{ $data->nim }}</td>
                                     <td>{{ $data->name }}</td>
-                                    <td>{{ $data->alergi }}</td>
-
+                                    <td>{{ $data->pesan }}</td>
+                                    <td>{{ $data->date }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
                     </table>
                     <!-- End Table with stripped rows -->
+
                 </div>
             </div>
 

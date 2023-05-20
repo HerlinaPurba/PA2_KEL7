@@ -43,7 +43,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Mahasiswa Alergi</h5>
-                    <a class="btn btn-primary" href="beranda" role="button">Kembali</a>
+                    <a class="btn btn-primary" href="{{ url('/') }}" role="button">Kembali</a>
 
                     <br>
 
