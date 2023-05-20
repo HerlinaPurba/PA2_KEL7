@@ -11,4 +11,8 @@ class beranda extends Controller
 
         return view('user.beranda');
     }
+    public function admin()
+    {
+        return view('admin.dashboard');
+    }
 }

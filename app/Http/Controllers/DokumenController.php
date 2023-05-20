@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Dokumen;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class DokumenController extends Controller
 {
@@ -125,4 +127,11 @@ class DokumenController extends Controller
         $data = Dokumen::all();
         return view('user.dokumen', compact('data'));
     }
+
+    // public function download($id)
+    // {
+    //     $data = DB::table('dokumen')->where('id', $id)->first();
+    //     $filePath = "public/dokumen/{$data->name_file}";
+    //     return \Response::download($filePath);
+    // }
 }

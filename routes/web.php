@@ -3,7 +3,6 @@
 use App\Http\Controllers\beranda;
 use App\Http\Controllers\dashboard;
 use App\Http\Controllers\DokumenController;
-use App\Http\Controllers\RenunganUserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegistrasiController;
@@ -115,6 +114,7 @@ Route::group(['middleware' => ['auth']], function () {
 
         //dokumen
         Route::get('document', [DokumenController::class, 'alldata'])->name('alldata');
+        Route::get('document/{id}', [DokumenController::class, 'download'])->name('download');
 
         //alergi
         Route::get('alergic', [AlergiController::class, 'alldata'])->name('alldata');
