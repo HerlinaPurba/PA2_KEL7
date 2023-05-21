@@ -51,36 +51,14 @@
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
 
-                <li class="nav-item d-block d-lg-none">
-                    <a class="nav-link nav-icon search-bar-toggle " href="#">
-                        <i class="bi bi-search"></i>
-                    </a>
-                </li><!-- End Search Icon-->
-
                 <li class="nav-item dropdown pe-3">
 
-                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#"
-                        data-bs-toggle="dropdown">
-                        <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
-                    </a><!-- End Profile Iamge Icon -->
+                    <a class="dropdown-item d-flex align-items-center" href="logout"><button type="button"
+                            class="btn btn-danger"><i class="bi bi-box-arrow-right"></i> Logout</button>
+                    </a>
 
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-                        <li class="dropdown-header">
-                            <h6>Kevin Anderson</h6>
-                            <span>Keasramaan</span>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
+                </li><!-- End Profile Nav -->
 
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="#">
-                                <i class="bi bi-box-arrow-right"></i>
-                                <span>Logout</span>
-                            </a>
-                        </li>
-
-                    </ul><!-- End Profile Dropdown Items -->
                 </li><!-- End Profile Nav -->
 
             </ul>
@@ -131,7 +109,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="../../sakit">
+                        <a href="../../addsakit">
                             <i class="bi bi-circle"></i><span>Data Mahasiswa Sakit</span>
                         </a>
                     </li>
@@ -150,15 +128,10 @@
             </li>
             <li class="nav-heading">Pages</li>
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="users-profile.html">
-                    <i class="bi bi-person-fill"></i>
-                    <span>Profile</span>
-                </a>
-            </li><!-- End Profile Page Nav -->
+
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-contact.html">
+                <a class="nav-link collapsed" href="../../kritiksaran">
                     <i class="bi bi-envelope-fill"></i>
                     <span>Kritik Saran</span>
                 </a>

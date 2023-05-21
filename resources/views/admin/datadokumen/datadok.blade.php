@@ -113,7 +113,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="sakit">
+                        <a href="addsakit">
                             <i class="bi bi-circle"></i><span>Data Mahasiswa Sakit</span>
                         </a>
                     </li>
@@ -136,7 +136,7 @@
 
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-contact.html">
+                <a class="nav-link collapsed" href="kritiksaran">
                     <i class="bi bi-envelope-fill"></i>
                     <span>Kritik Saran</span>
                 </a>

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dashboard - Admin</title>
+    <title>Kritik dan Saran</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -49,6 +49,10 @@
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
 
+                <li class="nav-item d-block d-lg-none">
+
+                </li><!-- End Search Icon-->
+
                 <li class="nav-item dropdown pe-3">
 
                     <a class="dropdown-item d-flex align-items-center" href="logout"><button type="button"
@@ -56,6 +60,7 @@
                     </a>
 
                 </li><!-- End Profile Nav -->
+
             </ul>
         </nav><!-- End Icons Navigation -->
 
@@ -81,7 +86,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="kurvey">
+                <a class="nav-link collapsed" href="kurvey">
                     <i class="bi bi-file-earmark-fill"></i>
                     <span>Data Kurve</span>
                 </a>
@@ -115,6 +120,7 @@
                     </li>
                 </ul>
             </li><!-- End Icons Nav -->
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="datadok">
                     <i class="bi bi-file-word-fill"></i>
@@ -123,8 +129,10 @@
             </li>
             <li class="nav-heading">Pages</li>
 
+
+
             <li class="nav-item">
-                <a class="nav-link collapsed" href="../../kritiksaran">
+                <a class="nav-link" href="../../kritiksaran">
                     <i class="bi bi-envelope-fill"></i>
                     <span>Kritik Saran</span>
                 </a>
@@ -140,94 +148,40 @@
         </ul>
 
     </aside><!-- End Sidebar-->
+
     <main id="main" class="main">
 
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <i class="bi bi-exclamation-triangle me-1"></i>
-            Penambahan data Kurve Massal, mohon diisi dengan teliti dan lengkap!
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
+
 
 
         <div class="row">
-            <div class="col-lg-6">
-
-
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Tambah Data Kurve Massal Kampus</h5>
-
-                        <!-- General Form Elements -->
-                        <form action="{{ url('kurvemassal') }}" method="POST">
-                            @csrf
-                            <div class="row mb-3">
-                                <label for="validationDefault04" class="col-sm-2 col-form-label">Prodi</label>
-                                <div class="col-sm-10">
-                                    <select class="form-select" id="validationDefault04" name="prodi3" required>
-                                        <option selected disabled value="">Pilih..</option>
-                                        <option value="D3 TI">D3 Teknologi Informasi</option>
-                                        <option value="D3 TK">D3 Teknologi Komputer</option>
-                                        <option value="D4 TRPL">D4 Teknologi Rekayasa Perangkat Lunak</option>
-                                        <option value="S1 SI">S1 Sistem Informasi</option>
-                                        <option value="S1 IF">S1 Informatika</option>
-                                        <option value="S1 TE">S1 Teknik Elektro</option>
-                                        <option value="S1 MR">S1 Manajemen Rekayasa</option>
-                                        <option value="S1 BP">S1 Teknik Bioproses</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="row mb-3">
-                                <label for="inputText" class="col-sm-2 col-form-label">Angkatan</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="angkatan" required>
-                                </div>
-                            </div>
-
-                            <div class="row mb-3">
-                                <label for="inputText" class="col-sm-2 col-form-label">Lokasi Kurve</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="lokasi" required>
-                                </div>
-                            </div>
-
-
-                            <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
-
-                        </form><!-- End General Form Elements -->
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6">
+            <div class="col-lg-12">
 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Data Kurve Massal</h5>
+                        <h5 class="card-title">Kritik dan Saran</h5>
 
                         <!-- Table with stripped rows -->
                         <table class="table datatable">
                             <thead>
                                 <tr>
-                                    <th scope="col">Prodi</th>
-                                    <th scope="col">Angkatan</th>
-                                    <th scope="col">Lokasi</th>
+                                    <th scope="col">NIM</th>
+                                    <th scope="col">Nama</th>
+                                    <th scope="col">Pesan</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($data as $data)
+                                {{-- @foreach ($data as $data)
                                     <tr>
-                                        <th>{{ $data->prodi3 }}</th>
-                                        <th>{{ $data->angkatan }}</th>
-                                        <td>{{ $data->lokasi }}</td>
+                                        <th>{{ $data->name }}</th>
+                                        <td>{{ $data->date }}</td>
+                                        <td>{{ $data->asrama }}</td>
                                         <td>
                                             <a class="btn btn-warning btn-sm"
-                                                href="{{ url('kurvemassal/' . $data->id . '/edit') }}"><i
+                                                href="{{ url('evaluation/' . $data->id . '/edit') }}"><i
                                                     class="bi bi-pencil-square"></i></a>
-                                            <form action="{{ url('kurvemassal/' . $data->id) }}" method="POST">
+                                            <form action="{{ url('evaluation/' . $data->id) }}" method="POST">
                                                 @csrf
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <button class="btn btn-danger btn-sm" type="submit"
@@ -238,60 +192,39 @@
                                         </td>
 
                                     </tr>
-                                @endforeach
+                                @endforeach --}}
                             </tbody>
                         </table>
                         <!-- End Table with stripped rows -->
 
-
                     </div>
                 </div>
             </div>
-
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="card text-justify">
-
-                        <div class="card-body">
-                            <h5 class="card-title">Data Kurve Harian</h5>
-                            <a href="kurvey" class="btn btn-primary">Tambah Data</a>
-                        </div>
-                    </div>
-
-                </div>
-                </section>
-
-    </main><!-- End #main -->
-
-
-
-
-
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
-        <div class="copyright">
-            &copy; Copyright <strong><span>PA-II Kelompok 7</span></strong>. All Rights Reserved
         </div>
 
-    </footer><!-- End Footer -->
+        <!-- ======= Footer ======= -->
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                &copy; Copyright <strong><span>PA-II Kelompok 7</span></strong>. All Rights Reserved
+            </div>
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+        </footer><!-- End Footer -->
 
-    <!-- Vendor JS Files -->
-    <script src="admin-asset/assets/vendor/apexcharts/apexcharts.min.js"></script>
-    <script src="admin-asset/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="admin-asset/assets/vendor/chart.js/chart.umd.js"></script>
-    <script src="admin-asset/assets/vendor/echarts/echarts.min.js"></script>
-    <script src="admin-asset/assets/vendor/quill/quill.min.js"></script>
-    <script src="admin-asset/assets/vendor/simple-datatables/simple-datatables.js"></script>
-    <script src="admin-asset/assets/vendor/tinymce/tinymce.min.js"></script>
-    <script src="admin-asset/assets/vendor/php-email-form/validate.js"></script>
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+                class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Template Main JS File -->
-    <script src="admin-asset/assets/js/main.js"></script>
+        <!-- Vendor JS Files -->
+        <script src="admin-asset/assets/vendor/apexcharts/apexcharts.min.js"></script>
+        <script src="admin-asset/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="admin-asset/assets/vendor/chart.js/chart.umd.js"></script>
+        <script src="admin-asset/assets/vendor/echarts/echarts.min.js"></script>
+        <script src="admin-asset/assets/vendor/quill/quill.min.js"></script>
+        <script src="admin-asset/assets/vendor/simple-datatables/simple-datatables.js"></script>
+        <script src="admin-asset/assets/vendor/tinymce/tinymce.min.js"></script>
+        <script src="admin-asset/assets/vendor/php-email-form/validate.js"></script>
+
+        <!-- Template Main JS File -->
+        <script src="admin-asset/assets/js/main.js"></script>
 
 </body>
 

@@ -52,28 +52,30 @@
                             <form class="row g-3">
                                 <div class="col-md-6">
                                     <label for="" class="form-label">NIM</label>
-                                    <input type="text" class="form-control" id="">
+                                    <input type="text" class="form-control" name="nim" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="inputPassword4" class="form-label">Nama</label>
-                                    <input type="text" class="form-control" id="inputPassword4">
+                                    <input type="text" class="form-control" name="name" required>
                                 </div>
 
                                 <div class="col-md-6">
                                     <label for="" class="form-label">Kelas</label>
-                                    <input type="text" class="form-control" id="" name="kelas">
+                                    <input type="text" class="form-control" name="kelas" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="" class="form-label">Tanggal</label>
-                                    <input type="date" class="form-control" id="" name="date">
+                                    <input type="date" class="form-control" name="date" required>
                                 </div>
+
                                 <div class="col-md-6">
-                                    <label for="" class="form-label">Jenis Sakit</label>
-                                    <input type="text" class="form-control" id="" name="sakit">
+                                    <label for="" class="form-label">Dosen & Mata Kuliah</label>
+                                    <textarea class="form-control" style="height: 100px" required name="dmk"></textarea>
                                 </div>
+
                                 <div class="col-md-6">
                                     <label for="" class="form-label">Deskripsi Sakit</label>
-                                    <textarea type="text" class="form-control" id="" name="deskripsi"></textarea>
+                                    <textarea class="form-control" style="height: 100px" required name="pesan"></textarea>
                                 </div>
 
                                 <div class="col-6">

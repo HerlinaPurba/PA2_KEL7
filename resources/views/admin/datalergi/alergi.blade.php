@@ -113,7 +113,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="sakit">
+                        <a href="addsakit">
                             <i class="bi bi-circle"></i><span>Data Mahasiswa Sakit</span>
                         </a>
                     </li>
@@ -132,22 +132,17 @@
             </li>
             <li class="nav-heading">Pages</li>
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="users-profile.html">
-                    <i class="bi bi-person-fill"></i>
-                    <span>Profile</span>
-                </a>
-            </li><!-- End Profile Page Nav -->
+
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-contact.html">
+                <a class="nav-link collapsed" href="../../kritiksaran">
                     <i class="bi bi-envelope-fill"></i>
                     <span>Kritik Saran</span>
                 </a>
             </li><!-- End Contact Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/registrasi">
+                <a class="nav-link collapsed" href="../../../registrasi">
                     <i class="bi bi-receipt-cutoff"></i>
                     <span>Registrasi</span>
                 </a>

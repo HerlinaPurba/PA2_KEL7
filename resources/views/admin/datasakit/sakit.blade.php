@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dashboard - Admin</title>
+    <title>Sakit</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -130,15 +130,10 @@
             </li>
             <li class="nav-heading">Pages</li>
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="users-profile.html">
-                    <i class="bi bi-person-fill"></i>
-                    <span>Profile</span>
-                </a>
-            </li><!-- End Profile Page Nav -->
+
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-contact.html">
+                <a class="nav-link collapsed" href="../../kritiksaran">
                     <i class="bi bi-envelope-fill"></i>
                     <span>Kritik Saran</span>
                 </a>
@@ -164,7 +159,121 @@
         </div>
 
 
+        <div class="row">
+            <div class="col-lg-6">
 
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Tambah Data Sakit Mahasiswa</h5>
+
+                        <!-- General Form Elements -->
+                        <form action="" method="POST">
+                            @csrf
+                            <div class="row mb-3">
+                                <label for="inputText" class="col-sm-2 col-form-label">NIM</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="nim" required>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="inputDate" class="col-sm-2 col-form-label">Nama</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="name" required>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="inputDate" class="col-sm-2 col-form-label">Kelas</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="kelas" required>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="inputDate" class="col-sm-2 col-form-label">Tanggal</label>
+                                <div class="col-sm-10">
+                                    <input type="date" class="form-control" name="date" required>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Dosen & Mata Kuliah</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" style="height: 100px" required name="dmk"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Deskripsi Sakit</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" style="height: 100px" required name="pesan"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="inputDate" class="col-sm-4 col-form-label">Penanganan</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="penanganan" required>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-10">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+
+                        </form><!-- End General Form Elements -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Evaluasi</h5>
+
+                        <!-- Table with stripped rows -->
+                        <table class="table datatable">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nama</th>
+                                    <th scope="col">Tanggal</th>
+                                    <th scope="col">Sakit</th>
+                                    <th scope="col">Penanganan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{-- @foreach ($data as $data)
+                                    <tr>
+                                        <th>{{ $data->name }}</th>
+                                        <td>{{ $data->date }}</td>
+                                        <td>{{ $data->asrama }}</td>
+                                        <td>
+                                            <a class="btn btn-warning btn-sm"
+                                                href="{{ url('evaluation/' . $data->id . '/edit') }}"><i
+                                                    class="bi bi-pencil-square"></i></a>
+                                            <form action="{{ url('evaluation/' . $data->id) }}" method="POST">
+                                                @csrf
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <button class="btn btn-danger btn-sm" type="submit"
+                                                    title="Delete Contact"
+                                                    onclick="return confirm(&quot;Confirm delete?&quot;)"><i
+                                                        class="bi bi-eraser"></i></button>
+                                            </form>
+                                        </td>
+
+                                    </tr>
+                                @endforeach --}}
+                            </tbody>
+                        </table>
+                        <!-- End Table with stripped rows -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- ======= Footer ======= -->
         <footer id="footer" class="footer">

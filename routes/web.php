@@ -74,8 +74,11 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('datadok', DokumenController::class);
 
 
-        Route::get('sakit', function () {
+        Route::get('addsakit', function () {
             return view('admin.datasakit.sakit');
+        });
+        Route::get('kritiksaran', function () {
+            return view('admin.kritiksaran.kritiksaran');
         });
 
 
@@ -144,7 +147,7 @@ Route::group(['middleware' => ['auth']], function () {
         });
 
         // kritik saran
-        Route::get('kritiksaran', function () {
+        Route::get('userkritiksaran', function () {
             return view('user.kritiksaran');
         });
 

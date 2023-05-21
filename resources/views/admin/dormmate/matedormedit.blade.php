@@ -50,11 +50,7 @@
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
 
-                <li class="nav-item d-block d-lg-none">
-                    <a class="nav-link nav-icon search-bar-toggle " href="#">
-                        <i class="bi bi-search"></i>
-                    </a>
-                </li><!-- End Search Icon-->
+
 
                 <li class="nav-item dropdown pe-3">
 
@@ -112,7 +108,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="../../sakit">
+                        <a href="../../addsakit">
                             <i class="bi bi-circle"></i><span>Data Mahasiswa Sakit</span>
                         </a>
                     </li>
@@ -131,15 +127,10 @@
             </li>
             <li class="nav-heading">Pages</li>
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="users-profile.html">
-                    <i class="bi bi-person-fill"></i>
-                    <span>Profile</span>
-                </a>
-            </li><!-- End Profile Page Nav -->
+
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-contact.html">
+                <a class="nav-link collapsed" href="../../kritiksaran">
                     <i class="bi bi-envelope-fill"></i>
                     <span>Kritik Saran</span>
                 </a>
