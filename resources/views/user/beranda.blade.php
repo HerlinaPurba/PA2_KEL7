@@ -79,7 +79,7 @@
                         </ul>
                     </li>
 
-                    <li><a class="nav-link scrollto" href="#contact">Kritik & Saran</a></li>
+                    <li><a class="nav-link scrollto" href="kritiksaran">Kritik & Saran</a></li>
                     <li><a class="nav-link scrollto" href="logout"><button type="button"
                                 class="btn btn-danger">Logout</button></a></li>
 

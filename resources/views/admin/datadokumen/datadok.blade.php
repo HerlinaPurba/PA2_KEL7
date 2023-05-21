@@ -134,12 +134,6 @@
 
             <li class="nav-heading">Pages</li>
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="users-profile.html">
-                    <i class="bi bi-person-fill"></i>
-                    <span>Profile</span>
-                </a>
-            </li><!-- End Profile Page Nav -->
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="pages-contact.html">
@@ -253,10 +247,6 @@
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
-
-    <!-- Vendor JS Files -->
-    {{-- <script src="{{ $totalAspaAspi->cdn() }}"></script>
-  {{ $totalAspaAspi->script() }} --}}
 
     <script src="admin-asset/assets/vendor/apexcharts/apexcharts.min.js"></script>
     <script src="admin-asset/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

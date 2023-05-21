@@ -309,8 +309,8 @@
                                 <li class="dropdown-header text-start">
                                     <h6>Action</h6>
                                 </li>
-                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                <li><a class="dropdown-item" href="#">Hapus</a></li>
+                                <li><a class="dropdown-item" href="evaluation">Edit</a></li>
+                                <li><a class="dropdown-item" href="evaluation">Hapus</a></li>
                             </ul>
                         </div>
 
@@ -318,36 +318,22 @@
                             <h5 class="card-title">Evaluation <span> | Keseluruhan Asrama</span></h5>
 
                             <div class="activity">
-                                <div class="activity-item d-flex">
-                                    <div class="activity-content">
-                                        Voluptatem blanditiis blanditiis eveniet
-                                    </div>
-                                </div><!-- End activity item-->
-
-                                <div class="activity-item d-flex">
-                                    <div class="activity-content">
-                                        Voluptates corrupti molestias voluptatem
-                                    </div>
-                                </div><!-- End activity item-->
-
-                                <div class="activity-item d-flex">
-                                    <div class="activity-content">
-                                        Tempore autem saepe <a href="#" class="fw-bold text-dark">occaecati
-                                            voluptatem</a> tempore
-                                    </div>
-                                </div><!-- End activity item-->
-
-                                <div class="activity-item d-flex">
-                                    <div class="activity-content">
-                                        Est sit eum reiciendis exercitationem
-                                    </div>
-                                </div><!-- End activity item-->
-
-                                <div class="activity-item d-flex">
-                                    <div class="activity-content">
-                                        Dicta dolorem harum nulla eius. Ut quidem quidem sit quas
-                                    </div>
-                                </div><!-- End activity item-->
+                                <table class="table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Pemberi</th>
+                                            <th scope="col">Pesan</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($data as $data)
+                                            <tr>
+                                                <th>{{ $data->name }}</th>
+                                                <td>{{ $data->pesan }}</td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
 
                             </div>
 
@@ -372,34 +358,22 @@
                             <h5 class="card-title">Kritik &amp; Saran</h5>
 
                             <div class="news">
-                                <div class="post-item clearfix">
-                                    <h4></h4>
-                                    <p>Sit recusandae non aspernatur laboriosam. Quia enim eligendi sed ut harum...</p>
-                                </div>
-
-                                <div class="post-item clearfix">
-                                    <h4>Quidem autem et impedits</h4>
-                                    <p>Illo nemo neque maiores vitae officiis cum eum turos elan dries werona nande...
-                                    </p>
-                                </div>
-
-                                <div class="post-item clearfix">
-                                    <h4>Id quia et et ut maxime similique occaecati uts</h4>
-                                    <p>Fugiat voluptas vero eaque accusantium eos. Consequuntur sed ipsam et totam...
-                                    </p>
-                                </div>
-
-                                <div class="post-item clearfix">
-                                    <h4>Laborum corporis quo dara net paras</h4>
-                                    <p>Qui enim quia optio. Eligendi aut asperiores enim repellendusvel rerum cuder...
-                                    </p>
-                                </div>
-
-                                <div class="post-item clearfix">
-                                    <h4>Et dolores corrupti quae illo quod dolors</h4>
-                                    <p>Odit ut eveniet modi reiciendis. Atque cupiditate libero beatae dignissimos
-                                        eius...</p>
-                                </div>
+                                <table class="table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Pemberi</th>
+                                            <th scope="col">Pesan</th>
+                                        </tr>
+                                    </thead>
+                                    {{-- <tbody>
+                                        @foreach ($data as $data)
+                                            <tr>
+                                                <th>{{ $data->name }}</th>
+                                                <td>{{ $data->pesan }}</td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody> --}}
+                                </table>
 
                             </div><!-- End sidebar recent posts-->
 

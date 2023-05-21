@@ -64,6 +64,7 @@ Route::post('/registrasiproses', [RegistrasiController::class, 'registerProses']
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['middleware' => ['cekUserLogin:admin']], function () {
         Route::resource('dashboard', dashboard::class);
+        Route::get('dashboard', [dashboard::class, 'eval'])->name('eval');
         Route::resource('matedorm', DormMateController::class);
         Route::resource('evaluation', EvaluationController::class);
         Route::resource('kurvey', KurveController::class);
@@ -142,6 +143,10 @@ Route::group(['middleware' => ['auth']], function () {
             return view('user.sakit');
         });
 
+        // kritik saran
+        Route::get('kritiksaran', function () {
+            return view('user.kritiksaran');
+        });
 
         //rules of dorm
         Route::get('aturanumum', function () {

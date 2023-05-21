@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Evaluasi</title>
+    <title>Sakit</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -24,6 +24,9 @@
     <link href="user-asset/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="user-asset/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="user-asset/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.bootstrap5.min.css">
+
 
     <!-- Template Main CSS File -->
     <link href="user-asset/assets/css/style.css" rel="stylesheet">
@@ -35,68 +38,95 @@
         <!-- ======= Services Section ======= -->
         <section id="services" class="services section-bg">
             <div class="container">
-                <a class="btn btn-primary" href="beranda" role="button">Kembali</a>
+                <a class="btn btn-primary" href="beranda" role="button">Kembali</a><br>
+                <br>
                 <div class="section-title">
-                    <h2>Evaluasi</h2>
-                    <h4>hasil evaluasi maupun pengumuman terlampir pada halaman ini</h4>
+                    <h2>Data Sakit Kamu</h2>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="icon-box">
-                            <i class="bi bi-envelope-exclamation"></i>
-                            <h4><a href="#">Rusun 1</a></h4>
-                            <p></p>
+                <div class="card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Tambah Data</h5>
+                            <br>
+                            <form class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="" class="form-label">NIM</label>
+                                    <input type="text" class="form-control" id="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputPassword4" class="form-label">Nama</label>
+                                    <input type="text" class="form-control" id="inputPassword4">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="" class="form-label">Kelas</label>
+                                    <input type="text" class="form-control" id="" name="kelas">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="" class="form-label">Tanggal</label>
+                                    <input type="date" class="form-control" id="" name="date">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="" class="form-label">Jenis Sakit</label>
+                                    <input type="text" class="form-control" id="" name="sakit">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="" class="form-label">Deskripsi Sakit</label>
+                                    <textarea type="text" class="form-control" id="" name="deskripsi"></textarea>
+                                </div>
+
+                                <div class="col-6">
+                                    <label for="" class="form-label">Penanganan</label>
+                                    <input type="text" class="form-control" id="" name="penganagan"
+                                        readonly>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                            Saya Jujur
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Kirim</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <div class="col-md-6 mt-4 mt-lg-0">
-                        <div class="icon-box">
-                            <i class="bi bi-envelope-exclamation-fill"></i>
-                            <h4><a href="alergi">Rusun 2</a></h4>
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mt-4">
-                        <div class="icon-box">
-                            <i class="bi bi-envelope-exclamation"></i>
-                            <h4><a href="sakit">Rusun 3</a></h4>
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mt-4">
-                        <div class="icon-box">
-                            <i class="bi bi-envelope-exclamation-fill"></i>
-                            <h4><a href="dokumen">Rusun 4</a></h4>
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mt-4">
-                        <div class="icon-box">
-                            <i class="bi bi-envelope-exclamation"></i>
-                            <h4><a href="#">Pniel</a></h4>
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mt-4">
-                        <div class="icon-box">
-                            <i class="bi bi-envelope-exclamation-fill"></i>
-                            <h4><a href="#">Silo</a></h4>
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mt-4">
-                        <div class="icon-box">
-                            <i class="bi bi-envelope-exclamation"></i>
-                            <h4><a href="#">Kapernaum</a></h4>
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mt-4">
-                        <div class="icon-box">
-                            <i class="bi bi-envelope-exclamation-fill"></i>
-                            <h4><a href="#">Antiokhia</a></h4>
-                            <p></p>
-                        </div>
+
+                    <div class="card-body">
+                        <br>
+                        <!-- Table with stripped rows -->
+                        <br>
+                        <table class="table datatable" id="datatable">
+                            <thead>
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">Tanggal</th>
+                                    <th scope="col">Sakit</th>
+                                    <th scope="col">Penanganan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                {{-- @php $no = 1; @endphp
+                                @foreach ($data as $data)
+                                    <tr>
+                                        <th scope="row">{{ $no++ }}</th>
+                                        <td>{{ $data->name }}</td>
+                                        <td>{{ $data->prodi2 }}</td>
+                                        <td>{{ $data->kamar }}</td>
+                                        <td>{{ $data->jadwal }}</td>
+                                        <td>{{ $data->tugas }}</td>
+                                    </tr>
+                                @endforeach --}}
+                            </tbody>
+                        </table>
+                        <!-- End Table with stripped rows -->
+
                     </div>
                 </div>
 
@@ -133,7 +163,29 @@
 
     <!-- Template Main JS File -->
     <script src="user-asset/assets/js/main.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
 
+    <!-- Template Main JS File -->
+    <script src="admin-asset/assets/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#datatable').DataTable({
+                dom: 'Bfrtip',
+                buttons: [{
+                    "extend": 'pdfHtml5',
+                    "text": 'Download',
+                    "className": 'btn-warning text-white'
+                }],
+
+            })
+        });
+    </script>
 </body>
 
 </html>
