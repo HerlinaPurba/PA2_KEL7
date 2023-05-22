@@ -1,8 +1,9 @@
 <?php
 
 use App\Http\Controllers\beranda;
-use App\Http\Controllers\dashboard;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DokumenController;
+use App\Http\Controllers\SakitController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegistrasiController;
@@ -63,8 +64,8 @@ Route::post('/registrasiproses', [RegistrasiController::class, 'registerProses']
 //admin
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['middleware' => ['cekUserLogin:admin']], function () {
-        Route::resource('dashboard', dashboard::class);
-        Route::get('dashboard', [dashboard::class, 'eval'])->name('eval');
+        Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+        Route::get('eval', [DashboardController::class, 'eval'])->name('eval');
         Route::resource('matedorm', DormMateController::class);
         Route::resource('evaluation', EvaluationController::class);
         Route::resource('kurvey', KurveController::class);
@@ -72,11 +73,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('renungan', RenunganController::class);
         Route::resource('alergi', AlergiController::class);
         Route::resource('datadok', DokumenController::class);
-
-
-        Route::get('addsakit', function () {
-            return view('admin.datasakit.sakit');
-        });
+        // Route::resource('addsakit', SakitController::class);
         Route::get('kritiksaran', function () {
             return view('admin.kritiksaran.kritiksaran');
         });
@@ -87,7 +84,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     //user
     Route::group(['middleware' => ['cekUserLogin:user']], function () {
-        Route::resource('beranda', beranda::class);
+        Route::get('beranda', [beranda::class, 'index']);
         Route::get('halamankamar', function () {
             return view('user.halamankamar');
         });
@@ -142,9 +139,8 @@ Route::group(['middleware' => ['auth']], function () {
 
 
         // sakit
-        Route::get('sakit', function () {
-            return view('user.sakit');
-        });
+        Route::resource('sakit', SakitController::class);
+
 
         // kritik saran
         Route::get('userkritiksaran', function () {

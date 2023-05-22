@@ -60,7 +60,7 @@ class DokumenController extends Controller
         );
         $datadok = $request->file('file');
         $nama_dokumen = $request->file('file')->getClientOriginalName();
-        $datadok->move('dokumen/', $nama_dokumen);
+        $datadok->move('dokumens/', $nama_dokumen);
 
         $model = new Dokumen;
         $model->name_file = $request->name_file;
@@ -101,7 +101,7 @@ class DokumenController extends Controller
         );
         $datadok = $request->file('file');
         $nama_dokumen = $request->file('file')->getClientOriginalName();
-        $datadok->move('dokumen/', $nama_dokumen);
+        $datadok->move('dokumens/', $nama_dokumen);
 
         $model = Dokumen::find($id);
         $model->name_file = $request->name_file;
@@ -128,10 +128,10 @@ class DokumenController extends Controller
         return view('user.dokumen', compact('data'));
     }
 
-    // public function download($id)
-    // {
-    //     $data = DB::table('dokumen')->where('id', $id)->first();
-    //     $filePath = "public/dokumen/{$data->name_file}";
-    //     return \Response::download($filePath);
-    // }
+    public function download($id)
+    {
+        $data = Dokumen::find($id);
+        // dd($data);
+        return response()->download(public_path('dokumen/' . $data->file));
+    }
 }

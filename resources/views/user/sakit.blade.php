@@ -49,14 +49,18 @@
                         <div class="card-body">
                             <h5 class="card-title">Tambah Data</h5>
                             <br>
-                            <form class="row g-3">
+
+                            <form class="row g-3" action="{{ url('sakit') }}" method="POST">
+                                @csrf
                                 <div class="col-md-6">
                                     <label for="" class="form-label">NIM</label>
-                                    <input type="text" class="form-control" name="nim" required>
+                                    <input type="" class="form-control" name="username"
+                                        value="{{ Auth::user()->username }}" readonly>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="inputPassword4" class="form-label">Nama</label>
-                                    <input type="text" class="form-control" name="name" required>
+                                    <input type="text" class="form-control" name="name"
+                                        value="{{ Auth::user()->name }}" readonly>
                                 </div>
 
                                 <div class="col-md-6">
@@ -80,18 +84,15 @@
 
                                 <div class="col-6">
                                     <label for="" class="form-label">Penanganan</label>
-                                    <input type="text" class="form-control" id="" name="penganagan"
-                                        readonly>
-                                </div>
-
-                                <div class="col-12">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                                        <label class="form-check-label" for="gridCheck">
-                                            Saya Jujur
-                                        </label>
+                                    <div class="col-sm-10">
+                                        <select class="form-select" id="validationDefault04" name="penanganan" required>
+                                            <option selected disabled value="">Pilih..</option>
+                                            <option value="Menunggu">Menunggu</option>
+                                        </select>
                                     </div>
                                 </div>
+
+
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-primary">Kirim</button>
                                 </div>
@@ -114,17 +115,15 @@
                             </thead>
                             <tbody>
 
-                                {{-- @php $no = 1; @endphp
+                                @php $no = 1; @endphp
                                 @foreach ($data as $data)
                                     <tr>
                                         <th scope="row">{{ $no++ }}</th>
-                                        <td>{{ $data->name }}</td>
-                                        <td>{{ $data->prodi2 }}</td>
-                                        <td>{{ $data->kamar }}</td>
-                                        <td>{{ $data->jadwal }}</td>
-                                        <td>{{ $data->tugas }}</td>
+                                        <td>{{ $data->date }}</td>
+                                        <td>{{ $data->pesan }}</td>
+                                        <td>{{ $data->penanganan }}</td>
                                     </tr>
-                                @endforeach --}}
+                                @endforeach
                             </tbody>
                         </table>
                         <!-- End Table with stripped rows -->

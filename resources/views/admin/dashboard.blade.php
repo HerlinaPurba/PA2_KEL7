@@ -30,6 +30,13 @@
 
     <!-- Template Main CSS File -->
     <link href="admin-asset/assets/css/style.css" rel="stylesheet">
+    <!-- Styles -->
+    <style>
+        #chartdiv {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
 
 </head>
 
@@ -180,7 +187,7 @@
                                             <i class="bi bi-people"></i>
                                         </div>
                                         <div class="ps-3">
-                                            <h6>145</h6>
+                                            <h6>{{ $total_mahasiswa }}</h6>
 
                                         </div>
                                     </div>
@@ -201,7 +208,7 @@
                                             <i class="bi bi-people"></i>
                                         </div>
                                         <div class="ps-3">
-                                            <h6>332</h6>
+                                            <h6>{{ $total_mahasiswa_putri }}</h6>
 
                                         </div>
                                     </div>
@@ -223,7 +230,7 @@
                                             <i class="bi bi-people"></i>
                                         </div>
                                         <div class="ps-3">
-                                            <h6>1244</h6>
+                                            <h6>{{ $total_mahasiswa_putra }}</h6>
                                         </div>
                                     </div>
 
@@ -239,7 +246,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Statistik <span>/Tahun</span></h5>
                                     <div class="p-6 m-20 bg-white rounded shadow">
-
+                                        <div id="chartdiv"></div>
                                     </div>
 
                                 </div>
@@ -272,21 +279,34 @@
                                         <thead>
                                             <tr>
                                                 <th scope="col">Nama</th>
-                                                <th scope="col">Prodi</th>
-                                                <th scope="col">Penyakit</th>
+                                                <th scope="col">Kelas</th>
+                                                <th scope="col">Sakit</th>
                                                 <th scope="col">Status</th>
                                             </tr>
                                         </thead>
-                                        {{-- <tbody>
-                        @foreach ($model3 as $data)
-                        <tr>
-                        <th>{{ $data->nim }}</th>
-                        <td>{{ $data->name }}</td>
-                        <td>{{ $data->kamar }}</td>
-                        <td>{{ $data->asrama }}</td>
-                        </tr>
-                        @endforeach
-                    </tbody> --}}
+                                        <tbody>
+                                            @foreach ($sakit as $item)
+                                                <tr>
+                                                    <th>{{ $item->name }}</th>
+                                                    <td>{{ $item->kelas }}</td>
+                                                    <td>{{ $item->pesan }}</td>
+
+                                                    {{-- <td>
+                                                        <a class="btn btn-warning btn-sm"
+                                                            href="{{ url('evaluation/' . $data->id . '/edit') }}"><i
+                                                                class="bi bi-pencil-square"></i></a>
+                                                        <form action="{{ url('evaluation/' . $data->id) }}" method="POST">
+                                                            @csrf
+                                                            <input type="hidden" name="_method" value="DELETE">
+                                                            <button class="btn btn-danger btn-sm" type="submit"
+                                                                title="Delete Contact"
+                                                                onclick="return confirm(&quot;Confirm delete?&quot;)"><i
+                                                                    class="bi bi-eraser"></i></button>
+                                                        </form>
+                                                    </td> --}}
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
                                     </table>
 
                                 </div>
@@ -414,7 +434,126 @@
 
     <!-- Template Main JS File -->
     <script src="admin-asset/assets/js/main.js"></script>
+    <!-- Resources -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 
+    <!-- Chart code -->
+    <script>
+        am5.ready(function() {
+
+            // Create root element
+            // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+            var root = am5.Root.new("chartdiv");
+
+
+            // Set themes
+            // https://www.amcharts.com/docs/v5/concepts/themes/
+            root.setThemes([
+                am5themes_Animated.new(root)
+            ]);
+
+
+            // Create chart
+            // https://www.amcharts.com/docs/v5/charts/xy-chart/
+            var chart = root.container.children.push(am5xy.XYChart.new(root, {
+                panX: false,
+                panY: false,
+                wheelX: "panX",
+                wheelY: "zoomX",
+                layout: root.verticalLayout
+            }));
+
+
+            // Add legend
+            // https://www.amcharts.com/docs/v5/charts/xy-chart/legend-xy-series/
+            var legend = chart.children.push(
+                am5.Legend.new(root, {
+                    centerX: am5.p50,
+                    x: am5.p50
+                })
+            );
+
+            var data = [@json($chart)];
+            // console.log(data);
+
+            // Create axes
+            // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+            var xRenderer = am5xy.AxisRendererX.new(root, {
+                cellStartLocation: 0.1,
+                cellEndLocation: 0.9
+            })
+
+            var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+                categoryField: "year",
+                renderer: xRenderer,
+                tooltip: am5.Tooltip.new(root, {})
+            }));
+
+            xRenderer.grid.template.setAll({
+                location: 1
+            })
+
+            xAxis.data.setAll(data);
+
+            var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+                renderer: am5xy.AxisRendererY.new(root, {
+                    strokeOpacity: 0.1
+                })
+            }));
+
+
+            // Add series
+            // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+            function makeSeries(name, fieldName) {
+                var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+                    name: name,
+                    xAxis: xAxis,
+                    yAxis: yAxis,
+                    valueYField: fieldName,
+                    categoryXField: "year"
+                }));
+
+                series.columns.template.setAll({
+                    tooltipText: "{name}, {categoryX}:{valueY}",
+                    width: am5.percent(90),
+                    tooltipY: 0,
+                    strokeOpacity: 0
+                });
+
+                series.data.setAll(data);
+
+                // Make stuff animate on load
+                // https://www.amcharts.com/docs/v5/concepts/animations/
+                series.appear();
+
+                series.bullets.push(function() {
+                    return am5.Bullet.new(root, {
+                        locationY: 0,
+                        sprite: am5.Label.new(root, {
+                            text: "{valueY}",
+                            fill: root.interfaceColors.get("alternativeText"),
+                            centerY: 0,
+                            centerX: am5.p50,
+                            populateText: true
+                        })
+                    });
+                });
+
+                legend.data.push(series);
+            }
+
+            makeSeries("Perempuan", "Perempuan");
+            makeSeries("Laki-laki", "Laki-laki");
+
+
+            // Make stuff animate on load
+            // https://www.amcharts.com/docs/v5/concepts/animations/
+            chart.appear(1000, 100);
+
+        }); // end am5.ready()
+    </script>
 </body>
 
 </html>

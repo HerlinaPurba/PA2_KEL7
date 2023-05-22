@@ -65,7 +65,6 @@
                                     <td>{{ $data->name_file }}</td>
                                     <td>{{ $data->file }}</td>
                                     <td><a class="btn btn-warning" href="{{ url('/document/' . $data->id) }}"
-                                            role="button"
                                             onclick="return confirm('Apakah anda yakin ingin mendwonload dokumen ?')">Download</a>
                                     </td>
 

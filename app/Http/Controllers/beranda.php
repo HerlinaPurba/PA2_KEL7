@@ -8,7 +8,6 @@ class beranda extends Controller
 {
     public function index()
     {
-
         return view('user.beranda');
     }
     public function admin()
