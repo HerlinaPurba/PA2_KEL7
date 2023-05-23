@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="user-asset/assets/img/favicon.png" rel="icon">
-    <link href="user-asset/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    {{-- <link href="user-asset/assets/img/favicon.png" rel="icon">
+    <link href="user-asset/assets/img/apple-touch-icon.png" rel="apple-touch-icon"> --}}
 
     <!-- Google Fonts -->
     <link
@@ -49,19 +49,17 @@
                         <div class="card-body">
                             <h5 class="card-title">Tambah Kritik dan Saran</h5>
                             <br>
-                            <form class="row g-3">
+                            <form class="row g-3" action="{{ url('userkritiksaran') }}" method="POST">
+                                @csrf
                                 <div class="col-md-6">
                                     <label for="" class="form-label">NIM</label>
-                                    <input type="text" class="form-control" id="">
+                                    <input type="" class="form-control" name="username"
+                                        value="{{ Auth::user()->username }}" readonly>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="inputPassword4" class="form-label">Nama</label>
-                                    <input type="text" class="form-control" id="inputPassword4">
-                                </div>
-
-                                <div class="col-md-6">
-                                    <label for="" class="form-label">Tanggal</label>
-                                    <input type="date" class="form-control" id="" name="date">
+                                    <input type="text" class="form-control" name="name"
+                                        value="{{ Auth::user()->name }}" readonly>
                                 </div>
 
                                 <div class="col-md-6">
@@ -84,24 +82,30 @@
                             <thead>
                                 <tr>
                                     <th scope="col">No</th>
-                                    <th scope="col">Tanggal</th>
                                     <th scope="col">Pesan</th>
-
+                                    <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
+
                             <tbody>
 
-                                {{-- @php $no = 1; @endphp
+                                @php $no = 1; @endphp
                                 @foreach ($data as $data)
                                     <tr>
                                         <th scope="row">{{ $no++ }}</th>
-                                        <td>{{ $data->name }}</td>
-                                        <td>{{ $data->prodi2 }}</td>
-                                        <td>{{ $data->kamar }}</td>
-                                        <td>{{ $data->jadwal }}</td>
-                                        <td>{{ $data->tugas }}</td>
+                                        <td>{{ $data->deskripsi }}</td>
+                                        <td>
+                                            <form action="{{ url('kritiksaran/' . $data->id) }}" method="POST">
+                                                @csrf
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <button class="btn btn-danger btn-sm" type="submit"
+                                                    title="Delete Contact"
+                                                    onclick="return confirm(&quot;Confirm delete?&quot;)"><i
+                                                        class="bi bi-eraser"></i></button>
+                                            </form>
+                                        </td>
                                     </tr>
-                                @endforeach --}}
+                                @endforeach
                             </tbody>
                         </table>
                         <!-- End Table with stripped rows -->

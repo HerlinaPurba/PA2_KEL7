@@ -10,7 +10,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="admin-asset/assets/img/favicon.png" rel="icon">
+    {{-- <link href="admin-asset/assets/img/favicon.png" rel="icon"> --}}
     <link href="admin-asset/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -212,7 +212,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-6">
+                            <div class="col-12">
                                 <label for="" class="form-label">Keterangan</label>
                                 <div class="col-sm-10">
                                     <select class="form-select" id="validationDefault04" name="penanganan" required>
@@ -245,7 +245,7 @@
                                     <th scope="col">Nama</th>
                                     <th scope="col">Tanggal</th>
                                     <th scope="col">Sakit</th>
-                                    <th scope="col">Penanganan</th>
+                                    <th scope="col">Keterangan</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>

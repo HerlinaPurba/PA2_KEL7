@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="admin-asset/assets/img/favicon.png" rel="icon">
-    <link href="admin-asset/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    {{-- <link href="admin-asset/assets/img/favicon.png" rel="icon">
+    <link href="admin-asset/assets/img/apple-touch-icon.png" rel="apple-touch-icon"> --}}
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -49,22 +49,36 @@
                     <br>
                     <div class="card" style="width: 100rem;">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">a.	Mahasiswa masing-masing memiliki 1 hanger untuk menggantung jas IT Del dan  digantungkan dengan rapi di tiang tempat tidur(bunkbed) dekat jendela kamar.</li>
-                            <li class="list-group-item">b.	Jemuran handuk (capstock) dan ember diletakkan di bawah jemuran dalam dan di samping kamar mandi.</li>
-                            <li class="list-group-item">c.	Mahasiswa mengambil air minum bagi penghuni asrama secara bergiliran sesuai dengan piket yang ditetapkan oleh Pembina Asrama.</li>
-                            <li class="list-group-item">d.	Mahasiswa meletakkan buku dan tas di dalam loker yang ada di lantai 1 dan 2.</li>
-                            <li class="list-group-item">e.	Mahasiswa menaruh sepatu di rak sepatu yang ada di depan asrama.</li>
-                            <li class="list-group-item">f.	Botol minum pribadi disusun rapi di atas lemari pakaian mahasiswa.</li>
-                            <li class="list-group-item">g.	Termos dan tempat makan umum diletakkan di pantry.</li>
-                            <li class="list-group-item">h.	Mahasiswa membersihkan got kamar mandi secara berkala.</li>
-                            <li class="list-group-item">i.	Sehabis menggunakan kamar mandi mahasiswa langsung menyerok air di lantai kamar mandi. </li>
-                            <li class="list-group-item">j.	Mahasiswa wajib tinggal di kamar masing-masing dan menempati tempat tidur masing-masing, dan tidak diperkenankan untuk tidur bersama dengan mahasiswa lainnya dalam satu kasur.</li>
-                            <li class="list-group-item">k.	Mahasiswa wajib membersihkan dan merapikan kamar dan tempat tidur masing-masing sebelum meninggalkan asrama baik pagi, siang maupun malam.</li>
-                            <li class="list-group-item">l.	Mahasiswa mengangkat air minum dari kantin sesudah makan malam sesuai dengan jadwal yang sudah ditentukan Pembina Asrama.</li>
-                            <li class="list-group-item">m.	Mahasiswa wajib mencuci gorden seminggu sebelum libur semester.</li>
-                            <li class="list-group-item">n.	Mahasiswa tidak diizinkan lagi masuk ke asrama sesudah makan pagi, kecuali atas izin dari Pembina Asrama.</li>
+                            <li class="list-group-item">a. Mahasiswa masing-masing memiliki 1 hanger untuk menggantung
+                                jas IT Del dan digantungkan dengan rapi di tiang tempat tidur(bunkbed) dekat jendela
+                                kamar.</li>
+                            <li class="list-group-item">b. Jemuran handuk (capstock) dan ember diletakkan di bawah
+                                jemuran dalam dan di samping kamar mandi.</li>
+                            <li class="list-group-item">c. Mahasiswa mengambil air minum bagi penghuni asrama secara
+                                bergiliran sesuai dengan piket yang ditetapkan oleh Pembina Asrama.</li>
+                            <li class="list-group-item">d. Mahasiswa meletakkan buku dan tas di dalam loker yang ada di
+                                lantai 1 dan 2.</li>
+                            <li class="list-group-item">e. Mahasiswa menaruh sepatu di rak sepatu yang ada di depan
+                                asrama.</li>
+                            <li class="list-group-item">f. Botol minum pribadi disusun rapi di atas lemari pakaian
+                                mahasiswa.</li>
+                            <li class="list-group-item">g. Termos dan tempat makan umum diletakkan di pantry.</li>
+                            <li class="list-group-item">h. Mahasiswa membersihkan got kamar mandi secara berkala.</li>
+                            <li class="list-group-item">i. Sehabis menggunakan kamar mandi mahasiswa langsung menyerok
+                                air di lantai kamar mandi. </li>
+                            <li class="list-group-item">j. Mahasiswa wajib tinggal di kamar masing-masing dan menempati
+                                tempat tidur masing-masing, dan tidak diperkenankan untuk tidur bersama dengan mahasiswa
+                                lainnya dalam satu kasur.</li>
+                            <li class="list-group-item">k. Mahasiswa wajib membersihkan dan merapikan kamar dan tempat
+                                tidur masing-masing sebelum meninggalkan asrama baik pagi, siang maupun malam.</li>
+                            <li class="list-group-item">l. Mahasiswa mengangkat air minum dari kantin sesudah makan
+                                malam sesuai dengan jadwal yang sudah ditentukan Pembina Asrama.</li>
+                            <li class="list-group-item">m. Mahasiswa wajib mencuci gorden seminggu sebelum libur
+                                semester.</li>
+                            <li class="list-group-item">n. Mahasiswa tidak diizinkan lagi masuk ke asrama sesudah makan
+                                pagi, kecuali atas izin dari Pembina Asrama.</li>
                         </ul>
-                      </div>
+                    </div>
 
 
 

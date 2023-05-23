@@ -2,23 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Sakit;
+use App\Models\KritikSaran;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class SakitController extends Controller
+class KritikSaranController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
+
      */
     public function index()
     {
-        $data = Sakit::where('user_id', Auth::user()->id)->get();
-        return view('user.sakit', compact('data'));
+        $data = KritikSaran::where('user_id', Auth::user()->id)->get();
+        return view('user.kritiksaran', compact('data'));
     }
-
-
 
     /**
      * Show the form for creating a new resource.
@@ -27,32 +26,26 @@ class SakitController extends Controller
      */
     public function create()
     {
-        $model = new Sakit;
-        return view('user.sakit', compact('model'));
+        $model = new KritikSaran;
+        return view('user.kritiksaran', compact('model'));
     }
 
     /**
      * Store a newly created resource in storage.
-     *
 
      */
     public function store(Request $request)
     {
-        $model = new Sakit;
+        $model = new KritikSaran;
         $model->user_id = Auth::user()->id;
         $model->username = $request->username;
         $model->name = $request->name;
-        $model->kelas = $request->kelas;
-        $model->date = $request->date;
-        $model->pesan = $request->pesan;
-        $model->penanganan = $request->penanganan;
+        $model->deskripsi = $request->deskripsi;
         // dd($request->all());
         $model->save();
 
-        return redirect('sakit');
+        return redirect('userkritiksaran');
     }
-
-
 
     /**
      * Display the specified resource.
@@ -66,14 +59,23 @@ class SakitController extends Controller
 
     /**
      * Show the form for editing the specified resource.
+     *
 
      */
+    public function edit($id)
+    {
+        //
+    }
 
     /**
      * Update the specified resource in storage.
      *
 
      */
+    public function update(Request $request, $id)
+    {
+        //
+    }
 
     /**
      * Remove the specified resource from storage.
@@ -82,10 +84,8 @@ class SakitController extends Controller
      */
     public function destroy($id)
     {
-        $model = Sakit::find($id);
+        $model = KritikSaran::find($id);
         $model->delete();
-        return redirect('sakit');
+        return redirect('userkritiksaran');
     }
-
-
 }

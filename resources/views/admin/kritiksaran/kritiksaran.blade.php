@@ -10,7 +10,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="admin-asset/assets/img/favicon.png" rel="icon">
+    {{-- <link href="admin-asset/assets/img/favicon.png" rel="icon"> --}}
     <link href="admin-asset/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -165,6 +165,7 @@
                         <table class="table datatable">
                             <thead>
                                 <tr>
+                                    <th scope="col">No</th>
                                     <th scope="col">NIM</th>
                                     <th scope="col">Nama</th>
                                     <th scope="col">Pesan</th>
@@ -172,16 +173,15 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                {{-- @foreach ($data as $data)
+                                @php $no = 1; @endphp
+                                @foreach ($data as $data)
                                     <tr>
+                                        <th scope="row">{{ $no++ }}</th>
+                                        <th>{{ $data->username }}</th>
                                         <th>{{ $data->name }}</th>
-                                        <td>{{ $data->date }}</td>
-                                        <td>{{ $data->asrama }}</td>
+                                        <td>{{ $data->deskripsi }}</td>
                                         <td>
-                                            <a class="btn btn-warning btn-sm"
-                                                href="{{ url('evaluation/' . $data->id . '/edit') }}"><i
-                                                    class="bi bi-pencil-square"></i></a>
-                                            <form action="{{ url('evaluation/' . $data->id) }}" method="POST">
+                                            <form action="{{ url('kritiksaran/' . $data->id) }}" method="POST">
                                                 @csrf
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <button class="btn btn-danger btn-sm" type="submit"
@@ -192,7 +192,7 @@
                                         </td>
 
                                     </tr>
-                                @endforeach --}}
+                                @endforeach
                             </tbody>
                         </table>
                         <!-- End Table with stripped rows -->

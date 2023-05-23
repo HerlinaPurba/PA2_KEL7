@@ -2,23 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Sakit;
+use App\Models\KritikSaran;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class SakitController extends Controller
+class KritikSaranAdminController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
+
      */
     public function index()
     {
-        $data = Sakit::where('user_id', Auth::user()->id)->get();
-        return view('user.sakit', compact('data'));
+        $data = KritikSaran::all();
+        return view('admin.kritiksaran.kritiksaran', compact('data'));
     }
-
-
 
     /**
      * Show the form for creating a new resource.
@@ -27,8 +25,7 @@ class SakitController extends Controller
      */
     public function create()
     {
-        $model = new Sakit;
-        return view('user.sakit', compact('model'));
+        //
     }
 
     /**
@@ -38,21 +35,8 @@ class SakitController extends Controller
      */
     public function store(Request $request)
     {
-        $model = new Sakit;
-        $model->user_id = Auth::user()->id;
-        $model->username = $request->username;
-        $model->name = $request->name;
-        $model->kelas = $request->kelas;
-        $model->date = $request->date;
-        $model->pesan = $request->pesan;
-        $model->penanganan = $request->penanganan;
-        // dd($request->all());
-        $model->save();
-
-        return redirect('sakit');
+        //
     }
-
-
 
     /**
      * Display the specified resource.
@@ -66,14 +50,23 @@ class SakitController extends Controller
 
     /**
      * Show the form for editing the specified resource.
+     *
 
      */
+    public function edit($id)
+    {
+        //
+    }
 
     /**
      * Update the specified resource in storage.
      *
 
      */
+    public function update(Request $request, $id)
+    {
+        //
+    }
 
     /**
      * Remove the specified resource from storage.
@@ -82,10 +75,8 @@ class SakitController extends Controller
      */
     public function destroy($id)
     {
-        $model = Sakit::find($id);
+        $model = KritikSaran::find($id);
         $model->delete();
-        return redirect('sakit');
+        return redirect('kritiksaran');
     }
-
-
 }

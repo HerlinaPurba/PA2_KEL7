@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="admin-asset/assets/img/favicon.png" rel="icon">
-    <link href="admin-asset/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    {{-- <link href="admin-asset/assets/img/favicon.png" rel="icon">
+    <link href="admin-asset/assets/img/apple-touch-icon.png" rel="apple-touch-icon"> --}}
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -49,15 +49,25 @@
                     <br>
                     <div class="card" style="width: 100rem;">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">a.	Mahasiswa wajib tinggal di kamar masing-masing dan menempati tempat tidur masing-masing dan tidak diperkenankan untuk tidur bersama dengan mahasiswa lainnya dalam satu kasur.</li>
-                            <li class="list-group-item">b.	Mahasiswa wajib merawat dan memelihara serta menyusun/menata segala perlengkapan/peralatan pribadi dengan rapi di kamar masing-masing (tidak berantakan).</li>
-                            <li class="list-group-item">c.	Mahasiswa wajib meletakan dan menyimpan sepatu di dalam loker masing-masing yang telah disediakan dan tidak diizinkan untuk meletakan alas kaki di luar dari loker yang telah ditentukan.</li>
-                            <li class="list-group-item">d.	Mahasiswa wajib membersihkan dan merapikan kamar dan tempat tidur masing-masing sebelum meninggalkan asrama baik pagi, siang maupun malam.</li>
-                            <li class="list-group-item">e.	Mahasiswa wajib mencuci gorden seminggu sebelum libur semester.</li>
-                            <li class="list-group-item">f.	Mahasiswa mengangkat air minum dari kantin sesudah makan malam sesuai dengan jadwal yang sudah ditentukan Pembina Asrama.</li>
-                            <li class="list-group-item">g.	Mahasiswa tidak diizinkan lagi masuk ke asrama sesudah makan pagi, kecuali atas izin dari Pembina Asrama.</li>
+                            <li class="list-group-item">a. Mahasiswa wajib tinggal di kamar masing-masing dan menempati
+                                tempat tidur masing-masing dan tidak diperkenankan untuk tidur bersama dengan mahasiswa
+                                lainnya dalam satu kasur.</li>
+                            <li class="list-group-item">b. Mahasiswa wajib merawat dan memelihara serta menyusun/menata
+                                segala perlengkapan/peralatan pribadi dengan rapi di kamar masing-masing (tidak
+                                berantakan).</li>
+                            <li class="list-group-item">c. Mahasiswa wajib meletakan dan menyimpan sepatu di dalam loker
+                                masing-masing yang telah disediakan dan tidak diizinkan untuk meletakan alas kaki di
+                                luar dari loker yang telah ditentukan.</li>
+                            <li class="list-group-item">d. Mahasiswa wajib membersihkan dan merapikan kamar dan tempat
+                                tidur masing-masing sebelum meninggalkan asrama baik pagi, siang maupun malam.</li>
+                            <li class="list-group-item">e. Mahasiswa wajib mencuci gorden seminggu sebelum libur
+                                semester.</li>
+                            <li class="list-group-item">f. Mahasiswa mengangkat air minum dari kantin sesudah makan
+                                malam sesuai dengan jadwal yang sudah ditentukan Pembina Asrama.</li>
+                            <li class="list-group-item">g. Mahasiswa tidak diizinkan lagi masuk ke asrama sesudah makan
+                                pagi, kecuali atas izin dari Pembina Asrama.</li>
                         </ul>
-                      </div>
+                    </div>
 
 
 

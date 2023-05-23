@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="admin-asset/assets/img/favicon.png" rel="icon">
-    <link href="admin-asset/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    {{-- <link href="admin-asset/assets/img/favicon.png" rel="icon">
+    <link href="admin-asset/assets/img/apple-touch-icon.png" rel="apple-touch-icon"> --}}
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -49,24 +49,39 @@
                     <br>
                     <div class="card" style="width: 100rem;">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">a.	Tidak disediakan kendaraan antarjemput dari kampus ke asrama dan sebaliknya.</li>
-                            <li class="list-group-item">b.	Mahasiswa dapat keluar asrama paling cepat pukul 06.15 WIB dan masuk ke asrama pada malam haripaling lama pukul 21.00 WIB. </li>
-                            <li class="list-group-item">c.	Ibadah dan Evaluasi malam dilaksanakan pada pukul 21.00-21.30 WIB.</li>
-                            <li class="list-group-item">d.	Jadwal kurve dilaksanakan dengan piket setiap harinya dan hari Rabu adalah kurve umum.</li>
-                            <li class="list-group-item">e.	Mahasiswa membersihkan got di sekitar asrama dibersihkan secara berkala.</li>
-                            <li class="list-group-item">f.	Alat kurve diletakkan di kamar mandi tempat pengambilan air kurve.</li>
-                            <li class="list-group-item">g.	Mahasiswa wajib mencuci gorden seminggu sebelum libur semester.</li>
-                            <li class="list-group-item">h.	Sapu lantai dimasukkan ke dalam kamar masing-masing. </li>
-                            <li class="list-group-item">i.	Mahasiswa tidak diperkenankan menggantungkan handuk, pakaian, deterjen, dan sabun di dalam kamar mandi.</li>
-                            <li class="list-group-item">j.	Mahasiswa meletakkan sepatu di loker masing-masing di setiap lantai yang sudah ditetapkan.</li>
-                            <li class="list-group-item">k.	Mahasiswa wajibtinggal di kamar masing-masing dan menempati tempat tidur masing-masing, dan tidak diperkenankan untuk tidur bersama dengan mahasiswa lainnya dalam satu kasur.</li>
-                            <li class="list-group-item">l.	Mahasiswa meletakkan hanger di bawah tangga lantai I dalam keadaan rapi. </li>
-                            <li class="list-group-item">m.	Mahasiswa diperkenankan belajar mandiri dalam asrama dengan ketentuan tidak menganggu mahasiswa lain yang sedang beristirahat.</li>
-                            <li class="list-group-item">n.	Waktu senyap di asrama adalah Pukul 00.00-4.00 WIB. Pada saat ini lampu kamar  dalam keadaan padam (off).</li>
-                            <li class="list-group-item">o.	Mahasiswa tidak diperkenankan tidur di kamar mahasiswa lain. </li>
+                            <li class="list-group-item">a. Tidak disediakan kendaraan antarjemput dari kampus ke asrama
+                                dan sebaliknya.</li>
+                            <li class="list-group-item">b. Mahasiswa dapat keluar asrama paling cepat pukul 06.15 WIB
+                                dan masuk ke asrama pada malam haripaling lama pukul 21.00 WIB. </li>
+                            <li class="list-group-item">c. Ibadah dan Evaluasi malam dilaksanakan pada pukul 21.00-21.30
+                                WIB.</li>
+                            <li class="list-group-item">d. Jadwal kurve dilaksanakan dengan piket setiap harinya dan
+                                hari Rabu adalah kurve umum.</li>
+                            <li class="list-group-item">e. Mahasiswa membersihkan got di sekitar asrama dibersihkan
+                                secara berkala.</li>
+                            <li class="list-group-item">f. Alat kurve diletakkan di kamar mandi tempat pengambilan air
+                                kurve.</li>
+                            <li class="list-group-item">g. Mahasiswa wajib mencuci gorden seminggu sebelum libur
+                                semester.</li>
+                            <li class="list-group-item">h. Sapu lantai dimasukkan ke dalam kamar masing-masing. </li>
+                            <li class="list-group-item">i. Mahasiswa tidak diperkenankan menggantungkan handuk, pakaian,
+                                deterjen, dan sabun di dalam kamar mandi.</li>
+                            <li class="list-group-item">j. Mahasiswa meletakkan sepatu di loker masing-masing di setiap
+                                lantai yang sudah ditetapkan.</li>
+                            <li class="list-group-item">k. Mahasiswa wajibtinggal di kamar masing-masing dan menempati
+                                tempat tidur masing-masing, dan tidak diperkenankan untuk tidur bersama dengan mahasiswa
+                                lainnya dalam satu kasur.</li>
+                            <li class="list-group-item">l. Mahasiswa meletakkan hanger di bawah tangga lantai I dalam
+                                keadaan rapi. </li>
+                            <li class="list-group-item">m. Mahasiswa diperkenankan belajar mandiri dalam asrama dengan
+                                ketentuan tidak menganggu mahasiswa lain yang sedang beristirahat.</li>
+                            <li class="list-group-item">n. Waktu senyap di asrama adalah Pukul 00.00-4.00 WIB. Pada saat
+                                ini lampu kamar dalam keadaan padam (off).</li>
+                            <li class="list-group-item">o. Mahasiswa tidak diperkenankan tidur di kamar mahasiswa lain.
+                            </li>
 
                         </ul>
-                      </div>
+                    </div>
 
 
 

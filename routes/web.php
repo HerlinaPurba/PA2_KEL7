@@ -3,6 +3,8 @@
 use App\Http\Controllers\beranda;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DokumenController;
+use App\Http\Controllers\KritikSaranAdminController;
+use App\Http\Controllers\KritikSaranController;
 use App\Http\Controllers\SakitAdminController;
 use App\Http\Controllers\SakitController;
 use Illuminate\Support\Facades\Route;
@@ -76,10 +78,10 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('datadok', DokumenController::class);
         Route::resource('addsakit', SakitAdminController::class);
         // Route::get('addsakit', [SakitController::class, 'alldata'])->name('alldata');
-        Route::get('kritiksaran', function () {
-            return view('admin.kritiksaran.kritiksaran');
-        });
-
+        // Route::get('kritiksaran', function () {
+        //     return view('admin.kritiksaran.kritiksaran');
+        // });
+        Route::resource('kritiksaran', KritikSaranAdminController::class);
 
     });
 
@@ -144,9 +146,10 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('sakit', SakitController::class);
 
         // kritik saran
-        Route::get('userkritiksaran', function () {
-            return view('user.kritiksaran');
-        });
+        Route::resource('userkritiksaran', KritikSaranController::class);
+        // Route::get('userkritiksaran', function () {
+        //     return view('user.kritiksaran');
+        // });
 
         //rules of dorm
         Route::get('aturanumum', function () {

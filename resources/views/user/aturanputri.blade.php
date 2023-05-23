@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="admin-asset/assets/img/favicon.png" rel="icon">
-    <link href="admin-asset/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    {{-- <link href="admin-asset/assets/img/favicon.png" rel="icon">
+    <link href="admin-asset/assets/img/apple-touch-icon.png" rel="apple-touch-icon"> --}}
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -49,29 +49,52 @@
                     <br>
                     <div class="card" style="width: 100rem;">
                         <ul class="list-group list-group-flush">
-                          <li class="list-group-item">a.	Mahasiswa tidak diizinkan lagi masuk ke asrama sesudah makan pagi, kecuali atas izin dari Pembina Asrama.</li>
-                          <li class="list-group-item">b.	Mahasiswa tidak diperkenankan meninggalkan sepatu atau sendal bermalam di teras asrama.</li>
-                          <li class="list-group-item">c.	Mahasiswa diharapkan membuka dan menutup loker sepatu dengan tidak menimbulkan suara ribut.</li>
-                          <li class="list-group-item">d.	Mahasiswa membuka dan menutup jendela dan gorden pada waktu yang telah ditentukan (pagi pukul 06.00 dan sore pukul 18.00 WIB).</li>
-                          <li class="list-group-item">e.	Mahasiswa tidak diperkenankan meletakkan atau menggantungkan hanger atau baju di bankbed atau jendela, kecuali piyama.</li>
-                          <li class="list-group-item">f.	Mahasiswa tidak diperkenankan meletakkan barang apapun dilantai kamar  dan di atas lemari pakaian.</li>
-                          <li class="list-group-item">g.	Mahasiswa hanya diperkenankan meletakkan diatas tempat tidur:selimut, sarung, bantal, boneka berukuran maksimal 50cm dan baju tidur.</li>
-                          <li class="list-group-item">h.	Mahasiswa wajib mencuci gorden seminggu sebelum libur semester.</li>
-                          <li class="list-group-item">i.	Mahasiswa menyapu selasar setiap hari sesuai dengan jadwal yang sudah ditentukan Pembina Asrama.</li>
-                          <li class="list-group-item">j.	Mahasiswa mengangkat air minum dari kantin sesudah makan malam sesuai dengan jadwal yang sudah ditentukan Pembina Asrama.</li>
-                          <li class="list-group-item">k.	Mahasiswa tidak diperbolehkan meninggalkan barangdiatas tempat pencucian selama mahasiswa tidak beraktivitas asrama.</li>
-                          <li class="list-group-item">l.	Mahasiswa tidak diperkenankan meninggalkan barang-barang pribadi di kamar mandi maupun toilet.</li>
-                          <li class="list-group-item">m.	Mahasiswa tidak diperkenankan menjemur di jemuran dalam asrama, kecuali pada waktu hujan.</li>
-                          <li class="list-group-item">n.	Mahasiswa wajib tinggal di kamar masing-masing dan menempati tempat tidur masing-masing, dan tidak diperkenankan untuk tidur bersama dengan mahasiswa lainnya dalam satu kasur.</li>
-                          <li class="list-group-item">o.	Pada hari Rabu pagi akan diadakan pembersihan kulkas, untuk itu mahasiswa wajib mengosongkan kulkas pada hari Selasa malam. Makanan mahasiswa yang tidak diambil pada saat pembersihan akan dikorsakan.</li>
-                          <li class="list-group-item">p.	Tidak boleh membawa nasi ke dalam asrama kecuali jika sedang sakit.</li>
-                          <li class="list-group-item">q.	Mahasiswa menyusun hanger dengan rapi di tempat yang telah disediakan.</li>
-                          <li class="list-group-item">r.	Mahasiswa menggunakan hanger di dalam lemari masing-masing  maksimal 5 hanger.</li>
-                          <li class="list-group-item">s.	Mahasiswa tidak diperkenankan mengunci lemari dan pintu kamar</li>
-                          <li class="list-group-item">t.	Mahasiswa wajib menggunakan sarung ketika mengikuti ibadah dan evaluasi. </li>
-                          <li class="list-group-item">u.	Mahasiswa mencuci pakaian maksimal 1x2 hari, mencuci sprei, sarung dan handuk 1x2 minggu dan mencuci sepatu 1x1 minggu</li>
+                            <li class="list-group-item">a. Mahasiswa tidak diizinkan lagi masuk ke asrama sesudah makan
+                                pagi, kecuali atas izin dari Pembina Asrama.</li>
+                            <li class="list-group-item">b. Mahasiswa tidak diperkenankan meninggalkan sepatu atau sendal
+                                bermalam di teras asrama.</li>
+                            <li class="list-group-item">c. Mahasiswa diharapkan membuka dan menutup loker sepatu dengan
+                                tidak menimbulkan suara ribut.</li>
+                            <li class="list-group-item">d. Mahasiswa membuka dan menutup jendela dan gorden pada waktu
+                                yang telah ditentukan (pagi pukul 06.00 dan sore pukul 18.00 WIB).</li>
+                            <li class="list-group-item">e. Mahasiswa tidak diperkenankan meletakkan atau menggantungkan
+                                hanger atau baju di bankbed atau jendela, kecuali piyama.</li>
+                            <li class="list-group-item">f. Mahasiswa tidak diperkenankan meletakkan barang apapun
+                                dilantai kamar dan di atas lemari pakaian.</li>
+                            <li class="list-group-item">g. Mahasiswa hanya diperkenankan meletakkan diatas tempat
+                                tidur:selimut, sarung, bantal, boneka berukuran maksimal 50cm dan baju tidur.</li>
+                            <li class="list-group-item">h. Mahasiswa wajib mencuci gorden seminggu sebelum libur
+                                semester.</li>
+                            <li class="list-group-item">i. Mahasiswa menyapu selasar setiap hari sesuai dengan jadwal
+                                yang sudah ditentukan Pembina Asrama.</li>
+                            <li class="list-group-item">j. Mahasiswa mengangkat air minum dari kantin sesudah makan
+                                malam sesuai dengan jadwal yang sudah ditentukan Pembina Asrama.</li>
+                            <li class="list-group-item">k. Mahasiswa tidak diperbolehkan meninggalkan barangdiatas
+                                tempat pencucian selama mahasiswa tidak beraktivitas asrama.</li>
+                            <li class="list-group-item">l. Mahasiswa tidak diperkenankan meninggalkan barang-barang
+                                pribadi di kamar mandi maupun toilet.</li>
+                            <li class="list-group-item">m. Mahasiswa tidak diperkenankan menjemur di jemuran dalam
+                                asrama, kecuali pada waktu hujan.</li>
+                            <li class="list-group-item">n. Mahasiswa wajib tinggal di kamar masing-masing dan menempati
+                                tempat tidur masing-masing, dan tidak diperkenankan untuk tidur bersama dengan mahasiswa
+                                lainnya dalam satu kasur.</li>
+                            <li class="list-group-item">o. Pada hari Rabu pagi akan diadakan pembersihan kulkas, untuk
+                                itu mahasiswa wajib mengosongkan kulkas pada hari Selasa malam. Makanan mahasiswa yang
+                                tidak diambil pada saat pembersihan akan dikorsakan.</li>
+                            <li class="list-group-item">p. Tidak boleh membawa nasi ke dalam asrama kecuali jika sedang
+                                sakit.</li>
+                            <li class="list-group-item">q. Mahasiswa menyusun hanger dengan rapi di tempat yang telah
+                                disediakan.</li>
+                            <li class="list-group-item">r. Mahasiswa menggunakan hanger di dalam lemari masing-masing
+                                maksimal 5 hanger.</li>
+                            <li class="list-group-item">s. Mahasiswa tidak diperkenankan mengunci lemari dan pintu kamar
+                            </li>
+                            <li class="list-group-item">t. Mahasiswa wajib menggunakan sarung ketika mengikuti ibadah
+                                dan evaluasi. </li>
+                            <li class="list-group-item">u. Mahasiswa mencuci pakaian maksimal 1x2 hari, mencuci sprei,
+                                sarung dan handuk 1x2 minggu dan mencuci sepatu 1x1 minggu</li>
                         </ul>
-                      </div>
+                    </div>
 
 
 

@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="user-asset/assets/img/favicon.png" rel="icon">
-    <link href="user-asset/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    {{-- <link href="user-asset/assets/img/favicon.png" rel="icon">
+    <link href="user-asset/assets/img/apple-touch-icon.png" rel="apple-touch-icon"> --}}
 
     <!-- Google Fonts -->
     <link
@@ -110,7 +110,7 @@
                                     <th scope="col">No</th>
                                     <th scope="col">Tanggal</th>
                                     <th scope="col">Sakit</th>
-                                    <th scope="col">Penanganan</th>
+                                    <th scope="col">Keterangan</th>
                                 </tr>
                             </thead>
                             <tbody>
