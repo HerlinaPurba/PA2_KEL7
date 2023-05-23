@@ -3,6 +3,7 @@
 use App\Http\Controllers\beranda;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DokumenController;
+use App\Http\Controllers\SakitAdminController;
 use App\Http\Controllers\SakitController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
@@ -73,7 +74,8 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('renungan', RenunganController::class);
         Route::resource('alergi', AlergiController::class);
         Route::resource('datadok', DokumenController::class);
-        // Route::resource('addsakit', SakitController::class);
+        Route::resource('addsakit', SakitAdminController::class);
+        // Route::get('addsakit', [SakitController::class, 'alldata'])->name('alldata');
         Route::get('kritiksaran', function () {
             return view('admin.kritiksaran.kritiksaran');
         });
@@ -140,7 +142,6 @@ Route::group(['middleware' => ['auth']], function () {
 
         // sakit
         Route::resource('sakit', SakitController::class);
-
 
         // kritik saran
         Route::get('userkritiksaran', function () {

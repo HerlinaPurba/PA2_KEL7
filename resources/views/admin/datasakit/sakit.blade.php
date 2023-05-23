@@ -173,7 +173,7 @@
                             <div class="row mb-3">
                                 <label for="inputText" class="col-sm-2 col-form-label">NIM</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="nim" required>
+                                    <input type="text" class="form-control" name="username" required>
                                 </div>
                             </div>
 
@@ -212,13 +212,18 @@
                                 </div>
                             </div>
 
-                            <div class="row mb-3">
-                                <label for="inputDate" class="col-sm-4 col-form-label">Penanganan</label>
+                            <div class="col-6">
+                                <label for="" class="form-label">Keterangan</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="penanganan" required>
+                                    <select class="form-select" id="validationDefault04" name="penanganan" required>
+                                        <option selected disabled value="">Pilih..</option>
+                                        <option value="Menunggu">Menunggu</option>
+                                        <option value="Izin">Diberi izin</option>
+                                        <option value="Ditolak">Tidak diberi izin</option>
+                                    </select>
                                 </div>
                             </div>
-
+                            <br>
                             <div class="col-sm-10">
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
@@ -227,7 +232,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-lg-6">
 
                 <div class="card">
@@ -242,19 +246,21 @@
                                     <th scope="col">Tanggal</th>
                                     <th scope="col">Sakit</th>
                                     <th scope="col">Penanganan</th>
+                                    <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {{-- @foreach ($data as $data)
+                                @foreach ($data as $data)
                                     <tr>
                                         <th>{{ $data->name }}</th>
                                         <td>{{ $data->date }}</td>
-                                        <td>{{ $data->asrama }}</td>
+                                        <td>{{ $data->pesan }}</td>
+                                        <td>{{ $data->penanganan }}</td>
                                         <td>
                                             <a class="btn btn-warning btn-sm"
-                                                href="{{ url('evaluation/' . $data->id . '/edit') }}"><i
+                                                href="{{ url('addsakit/' . $data->id . '/edit') }}"><i
                                                     class="bi bi-pencil-square"></i></a>
-                                            <form action="{{ url('evaluation/' . $data->id) }}" method="POST">
+                                            <form action="{{ url('addsakit/' . $data->id) }}" method="POST">
                                                 @csrf
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <button class="btn btn-danger btn-sm" type="submit"
@@ -265,7 +271,7 @@
                                         </td>
 
                                     </tr>
-                                @endforeach --}}
+                                @endforeach
                             </tbody>
                         </table>
                         <!-- End Table with stripped rows -->

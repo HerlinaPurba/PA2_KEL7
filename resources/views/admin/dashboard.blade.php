@@ -290,7 +290,7 @@
                                                     <th>{{ $item->name }}</th>
                                                     <td>{{ $item->kelas }}</td>
                                                     <td>{{ $item->pesan }}</td>
-
+                                                    <td>{{ $item->penanganan }}</td>
                                                     {{-- <td>
                                                         <a class="btn btn-warning btn-sm"
                                                             href="{{ url('evaluation/' . $data->id . '/edit') }}"><i

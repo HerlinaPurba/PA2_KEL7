@@ -83,7 +83,7 @@
                                 </div>
 
                                 <div class="col-6">
-                                    <label for="" class="form-label">Penanganan</label>
+                                    <label for="" class="form-label">Keterangan</label>
                                     <div class="col-sm-10">
                                         <select class="form-select" id="validationDefault04" name="penanganan" required>
                                             <option selected disabled value="">Pilih..</option>

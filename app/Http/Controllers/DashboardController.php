@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\DormMate;
 use App\Models\Evaluation;
 use App\Models\Sakit;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -31,7 +32,7 @@ class DashboardController extends Controller
             }
         }
         // dd($chart);
-        $sakit = Sakit::all();
+        $sakit = Sakit::whereDate('created_at', Carbon::now())->get();
         $data = Evaluation::all();
         return view('admin.dashboard', compact('data', 'chart', 'total_mahasiswa', 'total_mahasiswa_putri', 'total_mahasiswa_putra', 'sakit'));
     }
