@@ -61,12 +61,14 @@ Route::controller(LoginController::class)->group(function () {
 
 });
 
-Route::get('/registrasi', [RegistrasiController::class, 'registrasi']);
-Route::post('/registrasiproses', [RegistrasiController::class, 'registerProses'])->name('registrasi-proses');
+// Route::get('/registrasi', [RegistrasiController::class, 'registrasi']);
+// Route::post('/registrasiproses', [RegistrasiController::class, 'registerProses'])->name('registrasi-proses');
 
 //admin
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['middleware' => ['cekUserLogin:admin']], function () {
+        Route::get('/registrasi', [RegistrasiController::class, 'registrasi']);
+        Route::post('/registrasiproses', [RegistrasiController::class, 'registerProses'])->name('registrasi-proses');
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
         Route::get('eval', [DashboardController::class, 'eval'])->name('eval');
         Route::resource('matedorm', DormMateController::class);

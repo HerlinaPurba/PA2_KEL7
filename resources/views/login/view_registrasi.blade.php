@@ -31,99 +31,69 @@
                 <div class="login100-pic js-tilt" data-tilt>
                     <img src="login-assets/images/img-01.png" alt="IMG">
                 </div>
-
                 <form class="login100-form validate-form" action="{{ route('registrasi-proses') }}" method="POST">
-                    @if (Session::has('success'))
+                    {{-- @if (Session::has('success'))
                         <div class="alert alert-success">{{ Session::get('success') }}</div>
                     @endif
-                    @if (Session::has('fail'))
+                    @if (Session::has('gagal'))
                         <div class="alert alert-danger">{{ Session::get('fail') }}</div>
                     @endif
-                    @csrf
+                    @csrf --}}
+
                     <span class="login100-form-title">
                         Registrasi
                     </span>
 
-                    <div class="wrap-input100 validate-input" data-validate="NIM is required">
-                        <input autofocus
-                            class="input100
-                        @error('username')
-                            is-invalid
-                        @enderror
-                        "
-                            type="" name="username" placeholder="NIM">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-                            <i class="fa fa-user" aria-hidden="true"></i>
+                    @if (Session::has('success'))
+                        <div class="alert alert-success">{{ Session::get('success') }}</div>
+                    @endif
+                    @if (Session::has('error'))
+                        <div class="alert alert-danger">{{ Session::get('error') }}</div>
+                    @endif
+                    @csrf
 
-                        </span>
-                    </div>
-
-                    <div class="wrap-input100 validate-input" data-validate="Nama is required">
-                        <input autofocus
-                            class="input100
-                        @error('name')
-                            is-invalid
-                        @enderror
-                        "
-                            type="text" name="name" placeholder="Nama">
+                    <div class="wrap-input100 validate-input @if ($errors->has('username')) alert-validate @endif"
+                        @if ($errors->has('username')) data-validate="{{ $errors->first('username') }}" @endif>
+                        <input autofocus class="input100" type="text" name="username" placeholder="Username">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-user" aria-hidden="true"></i>
                         </span>
                     </div>
 
-                    {{-- <div class="wrap-input100 validate-input" data-validate="contoh: ex@abc.xyz">
-                        <input autofocus
-                            class="input100
-                        @error('email')
-                            is-invalid
-                        @enderror
-                        "
-                            type="email" name="email" placeholder="Email">
+                    <div class="wrap-input100 validate-input @if ($errors->has('name')) alert-validate @endif"
+                        @if ($errors->has('name')) data-validate="{{ $errors->first('name') }}" @endif>
+                        <input autofocus class="input100" type="text" name="name" placeholder="Nama">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <i class="fa fa-user" aria-hidden="true"></i>
                         </span>
-                    </div> --}}
+                    </div>
 
 
-                    <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input
-                            class="input100
-                        @error('password')
-                            is-invalid
-                        @enderror
-                        "
-                            type="password" name="password" placeholder="Password">
+                    <div class="wrap-input100 validate-input @if ($errors->has('password')) alert-validate @endif"
+                        @if ($errors->has('password')) data-validate="{{ $errors->first('password') }}" @endif>
+                        <input class="input100" type="password" name="password" placeholder="Password">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-lock" aria-hidden="true"></i>
                         </span>
                     </div>
 
-                    <div class="input-group mb-3 validate-input" data-validate="Role is required">
-                        <div
-                            class="input-group-prepend
-						@error('role')
-                            is-invalid
-                        @enderror
-						">
-                            {{-- <label class="input-group-text" for="inputGroupSelect01"><b>Role</b> </label> --}}
-                        </div>
-                    </div>
-                    <div>
-                        <select class="form-control" id="inputGroupSelect01" name="role">
-                            <option selected>Role...</option>
+                    <div class="wrap-input100 validate-input" data-validate="Role is required">
+                        <select class="form-control @error('role') is-invalid @enderror" id="inputGroupSelect01"
+                            name="role">
+                            <option selected disabled>Role...</option>
                             <option value="admin">Admin</option>
                             <option value="user">User</option>
                         </select>
+                        @error('role')
+                            <span class="invalid-feedback">{{ $message }}</span>
+                        @enderror
                     </div>
 
-
-
                     <div class="container-login100-form-btn">
-                        <button class="login100-form-btn">
+                        <button class="login100-form-btn" type="submit">
                             Registrasi
                         </button>
                     </div>
