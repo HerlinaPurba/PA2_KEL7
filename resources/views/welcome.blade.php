@@ -191,7 +191,7 @@
             </div>
         </section><!-- End About Section -->
         <!-- ======= Counts Section ======= -->
-        <section id="counts" class="counts section-bg">
+        {{-- <section id="counts" class="counts section-bg">
             <div class="container">
 
                 <div class="row justify-content-end">
@@ -225,7 +225,7 @@
                 </div>
 
             </div>
-        </section><!-- End Counts Section -->
+        </section><!-- End Counts Section --> --}}
 
         <!-- ======= About Video Section ======= -->
         <section id="" class="about-video">

@@ -257,19 +257,7 @@
                         <div class="col-12">
                             <div class="card recent-sales overflow-auto">
 
-                                <div class="filter">
-                                    <a class="icon" href="#" data-bs-toggle="dropdown"><i
-                                            class="bi bi-three-dots"></i></a>
-                                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                        <li class="dropdown-header text-start">
-                                            <h6>Filter</h6>
-                                        </li>
-
-                                        <li><a class="dropdown-item" href="#">Today</a></li>
-                                        <li><a class="dropdown-item" href="#">This Month</a></li>
-                                        <li><a class="dropdown-item" href="#">This Year</a></li>
-                                    </ul>
-                                </div>
+                                {{--  --}}
 
                                 <div class="card-body">
                                     <h5 class="card-title">Mahasiswa Sakit <span>| Hari ini</span></h5>
@@ -290,19 +278,6 @@
                                                     <td>{{ $item->kelas }}</td>
                                                     <td>{{ $item->pesan }}</td>
                                                     <td>{{ $item->penanganan }}</td>
-                                                    {{-- <td>
-                                                        <a class="btn btn-warning btn-sm"
-                                                            href="{{ url('evaluation/' . $data->id . '/edit') }}"><i
-                                                                class="bi bi-pencil-square"></i></a>
-                                                        <form action="{{ url('evaluation/' . $data->id) }}" method="POST">
-                                                            @csrf
-                                                            <input type="hidden" name="_method" value="DELETE">
-                                                            <button class="btn btn-danger btn-sm" type="submit"
-                                                                title="Delete Contact"
-                                                                onclick="return confirm(&quot;Confirm delete?&quot;)"><i
-                                                                    class="bi bi-eraser"></i></button>
-                                                        </form>
-                                                    </td> --}}
                                                 </tr>
                                             @endforeach
                                         </tbody>
@@ -360,7 +335,7 @@
                     </div><!-- End Recent Activity -->
 
                     <!-- News & Updates Traffic -->
-                    <div class="card">
+                    {{-- <div class="card">
                         <div class="filter">
                             <a class="icon" href="#" data-bs-toggle="dropdown"><i
                                     class="bi bi-three-dots"></i></a>
@@ -371,9 +346,9 @@
 
                                 <li><a class="dropdown-item" href="#">See More</a></li>
                             </ul>
-                        </div>
+                        </div> --}}
 
-                        <div class="card-body pb-0">
+                    {{-- <div class="card-body pb-0">
                             <h5 class="card-title">Kritik &amp; Saran</h5>
 
                             <div class="news">
@@ -384,22 +359,22 @@
                                             <th scope="col">Pesan</th>
                                         </tr>
                                     </thead>
-                                    {{-- <tbody>
-                                        @foreach ($data as $data)
+                                    <tbody>
+                                        {{-- @foreach ($kritiksaran as $data)
                                             <tr>
                                                 <th>{{ $data->name }}</th>
-                                                <td>{{ $data->pesan }}</td>
+                                                <td>{{ $data->deskripsi }}</td>
                                             </tr>
-                                        @endforeach
-                                    </tbody> --}}
+                                        @endforeach --}}
+                    {{-- </tbody>
                                 </table>
 
                             </div><!-- End sidebar recent posts-->
 
-                        </div>
-                    </div><!-- End News & Updates -->
+                        </div> --}}
+                </div><!-- End News & Updates -->
 
-                </div><!-- End Right side columns -->
+            </div><!-- End Right side columns -->
 
             </div>
         </section>

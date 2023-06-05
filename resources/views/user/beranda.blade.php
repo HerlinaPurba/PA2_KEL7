@@ -201,43 +201,7 @@
             </div>
         </section><!-- End About Section -->
         <!-- ======= Counts Section ======= -->
-        <section id="counts" class="counts section-bg">
-            <div class="container">
 
-                <div class="row justify-content-end">
-
-                    <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-                        <div class="count-box">
-                            {{-- <span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="2" class="purecounter"></span>
-            <p>Mahasiswi</p> --}}
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-                        <div class="count-box">
-                            <span data-purecounter-start="0" data-purecounter-end="350" data-purecounter-duration="2"
-                                class="purecounter"></span>
-                            <p>Mahasiswa</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-                        <div class="count-box">
-                            <span data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="2"
-                                class="purecounter"></span>
-                            <p>Mahasiswi</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-                        <div class="count-box">
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section><!-- End Counts Section -->
 
         <!-- ======= About Video Section ======= -->
         <section id="" class="about-video">
