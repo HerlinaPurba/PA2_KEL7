@@ -5,13 +5,12 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Index</title>
+    <title>Welcome Guest</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    {{-- <link rel="icon" href="assets/img/favicon.png">
-    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png"> --}}
+    <link rel="shortcut icon" href="{{ asset('assets/img/.png') }}">
 
     <!-- Google Fonts -->
     <link rel="stylesheet"

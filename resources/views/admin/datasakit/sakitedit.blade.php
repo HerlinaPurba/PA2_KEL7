@@ -10,9 +10,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    {{-- <link href="../../admin-asset/assets/img/favicon.png" rel="icon"> --}}
-    <link href="../../admin-asset/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+    <link rel="shortcut icon" href="{{ asset('assets/img/.png') }}">
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
     <link
@@ -109,12 +107,12 @@
                         </a>
                     </li>
                     <li>
-                        <a href="../../addsakit">
+                        <a href="../../addsakit" class="active">
                             <i class="bi bi-circle"></i><span>Data Mahasiswa Sakit</span>
                         </a>
                     </li>
                     <li>
-                        <a href="../../alergi" class="active">
+                        <a href="../../alergi" class="">
                             <i class="bi bi-circle"></i><span>Data Mahasiswa Alergi</span>
                         </a>
                     </li>
@@ -159,7 +157,7 @@
         <div class="row">
             <div class="col-lg-2">
                 <div class="card text-justify">
-                    <a href="../../addsakit" class="btn btn-primary">Tambah Data Alergi</a>
+                    <a href="../../addsakit" class="btn btn-primary">Tambah Data Sakit</a>
                 </div>
             </div>
 

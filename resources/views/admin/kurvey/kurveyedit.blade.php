@@ -11,7 +11,7 @@
 
     <!-- Favicons -->
     {{-- <link href="../../admin-asset/assets/img/favicon.png" rel="icon"> --}}
-    <link href="../../admin-asset/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="shortcut icon" href="{{ asset('assets/img/.png') }}">
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -198,7 +198,8 @@
                                                 Teknik Elektro</option>
                                             <option value="S1 MR" {{ $model->prodi2 == 'S1 MR' ? 'selected' : '' }}>S1
                                                 Manajemen Rekayasa</option>
-                                            <option value="S1 BP" {{ $model->prodi2 == 'S1 BP' ? 'selected' : '' }}>S1
+                                            <option value="S1 BP" {{ $model->prodi2 == 'S1 BP' ? 'selected' : '' }}>
+                                                S1
                                                 Teknik Bioproses</option>
                                         </select>
                                     </div>

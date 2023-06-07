@@ -11,7 +11,7 @@
 
     {{-- <!-- Favicons -->
     <link href="admin-asset/assets/img/favicon.png" rel="icon"> --}}
-    <link href="admin-asset/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="shortcut icon" href="{{ asset('assets/img/.png') }}">
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">

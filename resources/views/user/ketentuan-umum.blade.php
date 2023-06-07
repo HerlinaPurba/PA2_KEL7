@@ -10,8 +10,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    {{-- <link href="asrama/assets/img/favicon.png" rel="icon">
-    <link href="asrama/assets/img/apple-touch-icon.png" rel="apple-touch-icon"> --}}
+    <link rel="shortcut icon" href="{{ asset('assets/img/.png') }}">
 
     <!-- Google Fonts -->
     <link
