@@ -22,11 +22,13 @@
     <link href="admin-asset/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="admin-asset/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="admin-asset/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="admin-asset/assets/vendor/quill/quill.snow.css" rel="stylesheet">
     <link href="admin-asset/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
     <link href="admin-asset/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
     <!-- Template Main CSS File -->
     <link href="admin-asset/assets/css/style.css" rel="stylesheet">
@@ -48,6 +50,7 @@
 
                     <!-- Table with stripped rows -->
                     <br>
+
                     <table class="table datatable" id="datatable">
                         <thead>
                             <tr>
@@ -91,12 +94,15 @@
             class="bi bi-arrow-up-short"></i></a>
 
 
-    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
-        integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+        integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script> --}}
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="admin-asset/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
     <script src="admin-asset/assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>

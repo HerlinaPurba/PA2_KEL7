@@ -79,10 +79,6 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('alergi', AlergiController::class);
         Route::resource('datadok', DokumenController::class);
         Route::resource('addsakit', SakitAdminController::class);
-        // Route::get('addsakit', [SakitController::class, 'alldata'])->name('alldata');
-        // Route::get('kritiksaran', function () {
-        //     return view('admin.kritiksaran.kritiksaran');
-        // });
         Route::resource('kritiksaran', KritikSaranAdminController::class);
 
     });
@@ -125,6 +121,13 @@ Route::group(['middleware' => ['auth']], function () {
 
         //alergi
         Route::get('alergic', [AlergiController::class, 'alldata'])->name('alldata');
+        Route::get('alergic/data', [AlergiController::class, 'adddatauser'])->name('add.user');
+        Route::post('alergic/simpan', [AlergiController::class, 'simpanuser'])->name('simpanuser');
+
+
+        Route::get('home', function () {
+            return view('user.beranda');
+        });
 
         Route::get('kurveyharian', function () {
             return view('user.kurveyharian');
@@ -149,9 +152,7 @@ Route::group(['middleware' => ['auth']], function () {
 
         // kritik saran
         Route::resource('userkritiksaran', KritikSaranController::class);
-        // Route::get('userkritiksaran', function () {
-        //     return view('user.kritiksaran');
-        // });
+
 
         //rules of dorm
         Route::get('aturanumum', function () {

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Alergi;
+use Illuminate\Support\Facades\Auth;
 
 class AlergiController extends Controller
 {
@@ -34,6 +35,7 @@ class AlergiController extends Controller
     public function store(Request $request)
     {
         $model = new Alergi;
+        $model->user_id = Auth::user()->id;
         $model->nim = $request->nim;
         $model->name = $request->name;
         $model->alergi = $request->alergi;
@@ -98,6 +100,32 @@ class AlergiController extends Controller
     public function lihat()
     {
         $data = Alergi::all();
-        return view('alergi', compact('data'));
+        return view('alergi-guest', compact('data'));
     }
+
+    public function adddatauser()
+    {
+        $model = new Alergi;
+        return view('user.tambahalergi', compact('model'));
+    }
+
+    public function simpanuser(Request $request)
+    {
+        $file = $request->file('bukti');
+        $namaFile = $file->getClientOriginalName();
+        $tujuanFile = public_path('/bukti');
+        $file->move($tujuanFile, $namaFile);
+
+        $model = new Alergi;
+        $model->user_id = Auth::user()->id;
+        $model->nim = $request->nim;
+        $model->name = $request->name;
+        $model->alergi = $request->alergi;
+        $model->bukti = $namaFile;
+        $model->save();
+
+        return redirect('alergic')->with('success', 'Berhasil');
+    }
+
+
 }
